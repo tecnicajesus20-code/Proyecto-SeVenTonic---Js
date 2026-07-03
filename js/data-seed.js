@@ -3,7 +3,7 @@
 // DATOS INICIALES
 // ============================================
 
-const categoriasIniciales = [
+const categorias = [
     { id: 1, nombre: "Rock", descripcion: "Conciertos de rock y metal" },
     { id: 2, nombre: "Pop", descripcion: "Música pop y comercial" },
     { id: 3, nombre: "Electrónica", descripcion: "Música electrónica y EDM" },
@@ -12,7 +12,7 @@ const categoriasIniciales = [
     { id: 6, nombre: "Festivales", descripcion: "Festivales multigénero" }
 ];
 
-const eventosIniciales = [
+const eventos = [
     {
         id: 101,
         codigo: "EVT001",
@@ -111,7 +111,7 @@ const eventosIniciales = [
     }
 ];
 
-const ventasIniciales = [
+const ventas = [
     {
         id: 1001,
         fecha: "2026-06-25T15:30:00.000Z",

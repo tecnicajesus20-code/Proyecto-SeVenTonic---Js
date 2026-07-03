@@ -11,10 +11,9 @@ function ObtenerDatos(nombre) {
     if (datos) {
         return JSON.parse(datos);
     }
-    return []; // Si no hay nada, devuelve un array vacío
+    return [];
 }
 
-// 3. Funciones específicas (usan las de arriba)
 function guardarCategorias(lista) {
     guardarDatos('categorias', lista);
 }
@@ -96,4 +95,4 @@ function obtenerCiudades() {
     return [...new Set(ciudades)].sort();
 }
 
-console.log("💾 storage.js listo");
+console.log(" storage.js listo");

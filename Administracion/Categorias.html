@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +8,202 @@
     <link rel="stylesheet" href="../css/Admin-pages.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/Admin-categorias.css">
 </head>
-<body>
-    <main>
-        <header>
-            <h1>Administración</h1>
-            <div>
-              <button>
-                  <img src="" alt="">
-                  Nuevo evento
-              </button>
-              <img src="" alt="">
-            </div>
-          </header>
-          
-        <main>
-            <aside>
-                <div>
-                    <img src="" alt="">
-                    <h1>SevenTonic</h1> 
-                  </div> 
-              <article>
-                <div>
-                    <img src="" alt="">
-                    <p>Principal</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Gestion de Eventos</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Categorias</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Registro de ventas</p>
-                </div>
-              </article>
-              <article>
-                <div>
-                    <img src="" alt="">
-                    <p>Cerrar Sesión</p>
-                </div>
-              </article>
-            </aside>
-            
-        <section>
 
-        </section>
+
+<body>
+    <!-- ============================================
+SIDEBAR
+============================================ -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-logo material-symbols-outlined">
+                <h2 class="footer-logo">SeVenTonic</h2>
+            </span>
+            <p class="sidebar-label">ADMIN PANEL</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="../admin.html">
+                <span class="material-symbols-outlined"></span>
+                PRINCIPAL
+            </a>
+            <a href="gestion-eventos.html">
+                <span class="material-symbols-outlined"></span>
+                GESTIÓN DE EVENTOS
+            </a>
+            <a href="#" class="active">
+                <span class="material-symbols-outlined"></span>
+                CATEGORÍAS
+            </a>
+            <a href="reporte-ventas.html">
+                <span class="material-symbols-outlined"></span>
+                REGISTRO DE VENTAS
+            </a>
+            <a href="#" class="logout" id="btn-cerrar-sesion">
+                <span class="material-symbols-outlined"></span>
+                CERRAR SESIÓN
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <div class="sidebar-user-name">Administrador</div>
+                    <div class="sidebar-user-role"></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ============================================
+MAIN CONTENT
+============================================ -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <h2 class="header-title">Gestión de Categorías</h2>
+                <div class="header-breadcrumb">
+                    <span>Admin</span>
+                    <span>/</span>
+                    <span>Categorías</span>
+                </div>
+            </div>
+            <button class="btn-primary" id="btn-nueva-categoria">
+                <span class="material-symbols-outlined">add</span>
+                Nueva Categoría
+            </button>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <div class="page-content">
+
+            <!-- CATEGORY GRID -->
+            <div>
+                <div class="category-grid-header">
+                    <h3 class="category-grid-title">Categorías Existentes</h3>
+                    <div class="search-box">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                        <input type="text" id="buscador-categorias" placeholder="Buscar categoría...">
+                    </div>
+                </div>
+
+                <div id="contenedor-categorias" class="category-grid">
+                    <!-- Las categorías se renderizan aquí con JavaScript -->
+                    <p class="category-grid-loading">
+                        Cargando categorías...
+                    </p>
+                </div>
+            </div>
+
+            <!-- FORM SIDEBAR -->
+            <aside class="form-sidebar">
+                <div class="form-card">
+                    <h3 id="form-titulo">Creación Rápida</h3>
+                    <form id="form-categoria">
+                        <input type="hidden" id="categoria-id-editar" value="">
+
+                        <div class="form-group">
+                            <label for="input-nombre">Nombre de la Categoría</label>
+                            <input id="input-nombre" type="text" placeholder="Ej: Gaming" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-icono">Icono (Material Symbol)</label>
+                            <div class="icon-preview">
+                                <input id="input-icono" type="text" placeholder="music_note" value="category">
+                                <div class="icon-preview-box">
+                                    <span id="vista-previa-icono" class="material-symbols-outlined">category</span>
+                                </div>
+                            </div>
+                            <div class="icon-hint">
+                                Busca el nombre del icono en <a href="https://fonts.google.com/icons"
+                                    target="_blank">Material Symbols</a>.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-descripcion">Descripción</label>
+                            <textarea id="input-descripcion"
+                                placeholder="Breve descripción de la categoría..."></textarea>
+                        </div>
+
+                        <button class="btn-submit" type="submit" id="btn-guardar">
+                            GUARDAR CATEGORÍA
+                        </button>
+                        <button class="btn-cancel" type="button" id="btn-cancelar-edicion">
+                            CANCELAR EDICIÓN
+                        </button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+            <div class="footer-grid">
+                <div>
+                    <h2 class="footer-logo">SeVenTonic</h2>
+                    <p class="footer-copyright">
+                        © 2024 SEVENTONIC PLATFORM. ALL RIGHTS RESERVED.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="footer-title">Explorar</h5>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Privacy
+                                Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of
+                                Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Soporte</h5>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help
+                                Center</a></li>
+                        <li><a href="#" class="footer-link">Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-title">Estado del Sistema</h5>
+                    <div class="footer-status">
+                        <div class="footer-status-dot">
+                        </div>
+                        <span class="footer-status-text">Servidores
+                            Operativos</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
-    <script src="../js/modulos-admin/categorias.js" ></script>
+
+    <!-- ============================================
+MODAL DE CONFIRMACIÓN
+============================================ -->
+    <div class="modal-overlay" id="modal-confirmacion">
+        <div class="modal-content">
+            <h3>¿Eliminar categoría?</h3>
+            <p id="modal-mensaje">¿Estás seguro de que quieres eliminar esta categoría? Esta acción no se puede
+                deshacer.</p>
+            <div class="modal-actions">
+                <button class="btn-modal-cancel" id="btn-modal-cancelar">Cancelar</button>
+                <button class="btn-modal-confirm" id="btn-modal-confirmar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/modulos-admin/categorias.js"></script>
     <script src="../js/storage.js"></script>
     <script src="js/admin.js"></script>
     <script src="js/components.js"></script>
     <script src="js/data-seed.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

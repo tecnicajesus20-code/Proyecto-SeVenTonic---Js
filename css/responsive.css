@@ -1,3 +1,48 @@
-.clase{
-    display:none;
+/* ============================================
+           RESPONSIVE
+           ============================================ */
+@media (max-width: 1024px) {
+    .page-content {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .header {
+        padding: 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-sidebar {
+        position: static;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .category-grid-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-title {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
 }
