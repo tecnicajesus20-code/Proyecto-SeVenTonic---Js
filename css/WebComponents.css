@@ -11,4 +11,11 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover{
+    color: var(--ColorBtnPrimario);
+    background-color: var(--Fondo);
 }

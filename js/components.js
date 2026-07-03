@@ -6,5 +6,14 @@ class Btnprimario extends HTMLElement {
 }
 
 customElements.define(
-    "Btn-primario", Btnprimario
+    "btn-primario", Btnprimario
+
 );
+
+
+class Header extends HTMLElement {
+    constructor(){
+        super();
+        this.
+    }
+}
