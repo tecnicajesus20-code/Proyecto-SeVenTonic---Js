@@ -3,11 +3,32 @@
     box-sizing: 0;
 }
 
-:root{
-    --ColorBtnPrimario : #00f5ff;
-    --Fondo: #0d1515;
-    --FondoSecundario: #323B3B;
-    --letra: #dadada;
+:root {
+    /* Colores principales */
+    --color-primario: #00dce5;
+    --color-secundario: #9d00ff;
 
+    /* Fondos */
+    --fondo-principal: #0d1515;
+    --fondo-tarjeta: #192121;
+    --fondo-tarjeta-oscuro: #151d1d;
+    --fondo-pie-pagina: #081010;
+    --fondo-tarjeta-claro: #232b2b;
+    --fondo-tarjeta-hover: #2e3636;
 
-}
+    /* Texto */
+    --texto-principal: #dce4e4;
+    --texto-secundario: #b9caca;
+
+    /* Bordes */
+    --borde-principal: #849495;
+    --borde-secundario: #3a494a;
+
+    /* Color de énfasis */
+    --color-acento: #00dce5;
+
+    /* Estados */
+    --color-error: #ffb4ab;
+    --fondo-error: #93000a;
+
+    }
