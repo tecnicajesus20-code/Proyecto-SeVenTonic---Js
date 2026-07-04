@@ -1,12 +1,12 @@
 .btn-primary {
-    background-color: var(--neon-cyan);
-    color: var(--surface-bg);
+    background-color: var(--cian-neon);
+    color: var(--fondo-superficie);
     text-align: center;
     align-items: center;
     padding-left: 5vh;
     padding-right: 5vh;
     border: none;
-    box-shadow: 3px 2px 50px var(--neon-cyan);
+    box-shadow: 3px 2px 50px var(--cian-neon);
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -16,15 +16,15 @@
 }
 
 .btn-primary:hover{
-    color: var(--neon-cyan);
-    background-color: var(--surface-bg);
+    color: var(--cian-neon);
+    background-color: var(--fondo-superficie);
 }
 
 .btn-submit {
     width: 100%;
     background: transparent;
-    border: 1px solid var(--primary-fixed-dim);
-    color: var(--primary-fixed-dim);
+    border: 1px solid var(--primario-fijo-tenue);
+    color: var(--primario-fijo-tenue);
     padding: 16px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
@@ -37,6 +37,6 @@
 }
 
 .btn-submit:hover {
-    background: var(--primary-fixed-dim);
+    background: var(--primario-fijo-tenue);
     color: black;
 }

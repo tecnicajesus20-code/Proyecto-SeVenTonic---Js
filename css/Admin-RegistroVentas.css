@@ -1,0 +1,292 @@
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+.page-content-ventas {
+    padding: 24px 64px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ============================================
+   MÉTRICAS (grid de 4 tarjetas)
+   ============================================ */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.metric-card {
+    background: rgba(25, 33, 33, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(132, 148, 149, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-card:hover {
+    border-color: var(--cian-neon);
+    box-shadow: 0 0 20px rgba(0, 220, 229, 0.15);
+    transform: translateY(-2px);
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 220, 229, 0.1);
+    border-radius: 8px;
+    color: var(--primario-fijo-tenue);
+    flex-shrink: 0;
+}
+
+.metric-icon .material-symbols-outlined {
+    font-size: 24px;
+}
+
+.metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--borde-contorno);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.metric-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--sobre-superficie);
+    margin-top: 4px;
+}
+
+/* ============================================
+   CONTENEDOR DE LA TABLA
+   ============================================ */
+.table-container {
+    background: rgba(25, 33, 33, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(132, 148, 149, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(58, 73, 74, 0.2);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.table-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.table-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Búsqueda: estilos en Admin-categorias.css (.search-box) */
+
+/* ============================================
+   FILTRO SELECT
+   ============================================ */
+.filter-select {
+    background: var(--contenedor-superficie-bajo);
+    border: none;
+    border-bottom: 1px solid var(--borde-contorno-variante);
+    padding: 8px 12px;
+    color: var(--sobre-superficie);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primario-fijo-tenue);
+}
+
+.filter-select option {
+    background: var(--contenedor-superficie);
+    color: var(--sobre-superficie);
+}
+
+/* ============================================
+   TABLA
+   ============================================ */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sales-table thead {
+    background: rgba(35, 43, 43, 0.2);
+    border-bottom: 1px solid rgba(58, 73, 74, 0.2);
+}
+
+.sales-table th {
+    padding: 16px 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--primario-fijo-tenue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+.sales-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(58, 73, 74, 0.1);
+    font-size: 14px;
+    color: var(--sobre-superficie);
+}
+
+.sales-table tbody tr {
+    transition: all 0.3s;
+}
+
+.sales-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.sales-table .text-right {
+    text-align: right;
+}
+
+.sales-table .text-center {
+    text-align: center;
+}
+
+/* ============================================
+   PIE DE TABLA (paginación)
+   ============================================ */
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(58, 73, 74, 0.2);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.table-info {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--sobre-superficie-variante);
+    text-transform: uppercase;
+}
+
+.table-pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-pagination {
+    background: transparent;
+    border: 1px solid var(--borde-contorno-variante);
+    color: var(--sobre-superficie-variante);
+    padding: 6px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-pagination:hover:not(:disabled) {
+    border-color: var(--primario-fijo-tenue);
+    color: var(--primario-fijo-tenue);
+}
+
+.btn-pagination:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--sobre-superficie-variante);
+    padding: 0 8px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-content-ventas {
+        padding: 16px;
+    }
+
+    .table-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .table-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sales-table th,
+    .sales-table td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .metric-value {
+        font-size: 20px;
+    }
+
+    .table-footer {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .table-pagination {
+        justify-content: center;
+    }
+}

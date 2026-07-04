@@ -1,105 +1,122 @@
 class Btnprimario extends HTMLElement {
-    constructor(){
+    constructor() {
         super();
-        this.classList.add("btn-primary")
+        this.classList.add("btn-primary");
     }
 }
 
-customElements.define(
-    "btn-primario", Btnprimario
-
-);
+customElements.define("btn-primario", Btnprimario);
 
 class BtnSecundario extends HTMLElement {
-    constructor(){
+    constructor() {
         super();
-        this.classList.add("btn-submit")
+        this.classList.add("btn-submit");
     }
 }
 
-customElements.define(
-    "btn-secundario", BtnSecundario
-);
-customElements.get("btn-secundario")
+customElements.define("btn-secundario", BtnSecundario);
+
+const paginasAdmin = {
+    "Principaladmin.html": {
+        titulo: "Administración",
+        breadcrumb: "Principal",
+        boton: null
+    },
+    "Categorias.html": {
+        titulo: "Gestión de Categorías",
+        breadcrumb: "Categorías",
+        boton: { id: "btn-nueva-categoria", icono: "add", texto: "NUEVA CATEGORÍA" }
+    },
+    "gestion-eventos.html": {
+        titulo: "Gestión de Eventos",
+        breadcrumb: "Eventos",
+        boton: { id: "btn-nuevo-evento", icono: "add", texto: "NUEVO EVENTO", href: "#" }
+    },
+    "Reporte-ventas.html": {
+        titulo: "Registro de Ventas",
+        breadcrumb: "Ventas",
+        boton: null
+    }
+};
+
+function obtenerPaginaActual() {
+    return window.location.pathname.split("/").pop() || "Principaladmin.html";
+}
+
 class Header extends HTMLElement {
     connectedCallback() {
+        const pagina = paginasAdmin[obtenerPaginaActual()] || paginasAdmin["Principaladmin.html"];
+        const botonHtml = pagina.boton
+            ? `<btn-primario id="${pagina.boton.id}">
+                    <span class="material-symbols-outlined">${pagina.boton.icono}</span>
+                    ${pagina.boton.texto}
+               </btn-primario>`
+            : "";
+
         this.innerHTML = `
         <section class="header">
-                <div>
-                <h2 class="header-title">Administración</h2>
+            <div>
+                <h2 class="header-title">${pagina.titulo}</h2>
                 <div class="header-breadcrumb">
                     <span>Admin</span>
                     <span>/</span>
-                    <span>Categorías</span>
+                    <span>${pagina.breadcrumb}</span>
                 </div>
             </div>
-               <a href="gestion-eventos.html">
-                 <btn-primario  id="btn-nueva-categoria">
-                    <span class="material-symbols-outlined"><img src="" alt=""></span>
-                    NEW EVENT
-                </btn-primario>
-               </a>
-        </section>
-        `;
+            ${botonHtml}
+        </section>`;
     }
 }
 
-customElements.define(
-    "header-admin", Header
-);
+customElements.define("header-admin", Header);
 
 class Sidebar extends HTMLElement {
     connectedCallback() {
+        const paginaActual = obtenerPaginaActual();
+        const items = [
+            { href: "Principaladmin.html", icono: "dashboard", texto: "PRINCIPAL" },
+            { href: "gestion-eventos.html", icono: "event", texto: "GESTIÓN DE EVENTOS" },
+            { href: "Categorias.html", icono: "category", texto: "CATEGORÍAS" },
+            { href: "Reporte-ventas.html", icono: "payments", texto: "REGISTRO DE VENTAS" }
+        ];
+
+        const enlaces = items.map((item) => {
+            const activo = paginaActual === item.href ? " active" : "";
+            return `<a href="${item.href}" class="${activo.trim()}">
+                <span class="material-symbols-outlined">${item.icono}</span>
+                ${item.texto}
+            </a>`;
+        }).join("");
+
         this.innerHTML = `
-          <aside class="sidebar">
-        <div class="sidebar-header">
-            <span class="sidebar-logo material-symbols-outlined">
-                <h2 class="footer-logo">SeVenTonic</h2>
-            </span>
-            <p class="sidebar-label">ADMIN PANEL</p>
-        </div>
-        <nav class="sidebar-nav">
-            <a href="Principaladmin.html">
-                <span class="material-symbols-outlined"></span>
-                PRINCIPAL
-            </a>
-            <a href="gestion-eventos.html">
-                <span class="material-symbols-outlined"></span>
-                GESTIÓN DE EVENTOS
-            </a>
-            <a href="Categorias.html">
-                <span class="material-symbols-outlined"></span>
-                CATEGORÍAS
-            </a>
-            <a href="Reporte-ventas.html">
-                <span class="material-symbols-outlined"></span>
-                REGISTRO DE VENTAS
-            </a>
-            <a href="../index.html" class="logout" id="btn-cerrar-sesion">
-                <span class="material-symbols-outlined"></span>
-                CERRAR SESIÓN
-            </a>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="sidebar-user">
-                <div class="sidebar-avatar">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <div class="sidebar-user-name">Administrador</div>
-                    <div class="sidebar-user-role"></div>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-logo footer-logo">SeVenTonic</h2>
+                <p class="sidebar-label">ADMIN PANEL</p>
+            </div>
+            <nav class="sidebar-nav">
+                ${enlaces}
+                <a href="../index.html" class="logout" id="btn-cerrar-sesion">
+                    <span class="material-symbols-outlined">logout</span>
+                    CERRAR SESIÓN
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-avatar">
+                        <span class="material-symbols-outlined">person</span>
+                    </div>
+                    <div>
+                        <div class="sidebar-user-name">Admin User</div>
+                        <div class="sidebar-user-role">ROOT ACCESS</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </aside>
-        `;
+        </aside>`;
     }
 }
 
-customElements.define(
-    "barra-lateral-admin", Sidebar
-);
-
+customElements.define("barra-lateral-admin", Sidebar);
 
 class footer extends HTMLElement {
     connectedCallback() {
@@ -115,36 +132,27 @@ class footer extends HTMLElement {
                 <div>
                     <h5 class="footer-title">Explorar</h5>
                     <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Privacy
-                                Policy</a></li>
-                        <li><a href="#" class="footer-link">Terms of
-                                Service</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="footer-title">Soporte</h5>
                     <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Help
-                                Center</a></li>
-                        <li><a href="#" class="footer-link">Newsletter</a>
-                        </li>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Newsletter</a></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="footer-title">Estado del Sistema</h5>
                     <div class="footer-status">
-                        <div class="footer-status-dot">
-                        </div>
-                        <span class="footer-status-text">Servidores
-                            Operativos</span>
+                        <div class="footer-status-dot"></div>
+                        <span class="footer-status-text">Servidores Operativos</span>
                     </div>
                 </div>
             </div>
-        </footer>
-        `;
+        </footer>`;
     }
 }
 
-customElements.define(
-    "footer-admin", footer
-);
+customElements.define("footer-admin", footer);

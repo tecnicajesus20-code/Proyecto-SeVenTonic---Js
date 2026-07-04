@@ -3,16 +3,16 @@
 // DATOS INICIALES
 // ============================================
 
-const categorias = [
-    { id: 1, nombre: "Rock", descripcion: "Conciertos de rock y metal" },
-    { id: 2, nombre: "Pop", descripcion: "Música pop y comercial" },
-    { id: 3, nombre: "Electrónica", descripcion: "Música electrónica y EDM" },
-    { id: 4, nombre: "Deportes", descripcion: "Eventos deportivos" },
-    { id: 5, nombre: "Jazz & Blues", descripcion: "Música jazz y blues" },
-    { id: 6, nombre: "Festivales", descripcion: "Festivales multigénero" }
+const categoriasIniciales = [
+    { id: 1, nombre: "Conciertos", descripcion: "Conciertos y shows en vivo", icono: "music_note" },
+    { id: 2, nombre: "Deportes", descripcion: "Eventos deportivos", icono: "sports_soccer" },
+    { id: 3, nombre: "Negocios", descripcion: "Conferencias y networking", icono: "business_center" },
+    { id: 4, nombre: "Festivales", descripcion: "Festivales multigénero", icono: "festival" },
+    { id: 5, nombre: "Jazz & Blues", descripcion: "Música jazz y blues", icono: "piano" },
+    { id: 6, nombre: "Electrónica", descripcion: "Música electrónica y EDM", icono: "graphic_eq" }
 ];
 
-const eventos = [
+const eventosIniciales = [
     {
         id: 101,
         codigo: "EVT001",
@@ -111,7 +111,7 @@ const eventos = [
     }
 ];
 
-const ventas = [
+const ventasIniciales = [
     {
         id: 1001,
         fecha: "2026-06-25T15:30:00.000Z",

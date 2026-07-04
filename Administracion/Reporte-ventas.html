@@ -1,34 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte de Ventas</title>
-   <link rel="stylesheet" href="../css/Admin-categorias.css">
+    <link rel="stylesheet" href="../css/Admin-categorias.css">
     <link rel="stylesheet" href="../css/Admin-pages.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/Admin-RegistroVentas.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
+
 <body id="admin-ventas">
     <barra-lateral-admin></barra-lateral-admin>
-    <main class="main-content">
+    <main class="contenido-principal">
         <header>
             <header-admin></header-admin>
-        </header> 
+        </header>
 
+        <!-- Contenido de ventas -->
         <section>
+            <div class="page-content-ventas">
 
+                <!-- Métricas -->
+                <section class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Ventas Totales</p>
+                            <h3 class="metric-value" id="total-ventas">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Ingresos Netos</p>
+                            <h3 class="metric-value" id="total-ingresos">$0</h3>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">confirmation_number</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Tickets Vendidos</p>
+                            <h3 class="metric-value" id="total-tickets">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">trending_up</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Ticket Promedio</p>
+                            <h3 class="metric-value" id="ticket-promedio">$0</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabla de ventas -->
+                <section class="table-container">
+                    <div class="table-header">
+                        <h3 class="table-title">Ventas Recientes</h3>
+                        <div class="table-controls">
+                            <div class="search-box">
+                                <span class="material-symbols-outlined search-icon">search</span>
+                                <input type="text" id="buscador-ventas" placeholder="Buscar por cliente o evento...">
+                            </div>
+                            <select id="filtro-ciudad-ventas" class="filter-select">
+                                <option value="">Todas las ciudades</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="sales-table">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Evento</th>
+                                    <th>Ciudad</th>
+                                    <th>Total</th>
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-ventas-body">
+                                <tr>
+                                    <td colspan="6" class="text-center"
+                                        style="padding: 40px; color: var(--sobre-superficie-variante);">
+                                        Cargando ventas...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-footer">
+                        <span class="table-info" id="info-ventas">Mostrando 0 ventas</span>
+                        <div class="table-pagination">
+                            <button class="btn-pagination" id="btn-anterior" disabled>Anterior</button>
+                            <span class="pagination-info" id="pagina-actual">Página 1</span>
+                            <button class="btn-pagination" id="btn-siguiente">Siguiente</button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
         </section>
         <footer>
-             <footer-admin></footer-admin>
+            <footer-admin></footer-admin>
         </footer>
     </main>
-    <script src="../js/modulos-admin/reporte-ventas.js" ></script>
+    <script src="../js/modulos-admin/reporte-ventas.js"></script>
     <script src="../js/storage.js"></script>
     <script src="../js/admin.js"></script>
     <script src="../js/components.js"></script>
     <script src="../js/data-seed.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>
