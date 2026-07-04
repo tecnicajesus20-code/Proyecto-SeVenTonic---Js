@@ -1,12 +1,12 @@
 .btn-primary {
-    background-color: var(--ColorBtnPrimario);
-    color: var(--Fondo);
+    background-color: var(--neon-cyan);
+    color: var(--surface-bg);
     text-align: center;
     align-items: center;
     padding-left: 5vh;
     padding-right: 5vh;
     border: none;
-    box-shadow: 3px 2px 50px var(--ColorBtnPrimario);
+    box-shadow: 3px 2px 50px var(--neon-cyan);
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -16,6 +16,27 @@
 }
 
 .btn-primary:hover{
-    color: var(--ColorBtnPrimario);
-    background-color: var(--Fondo);
+    color: var(--neon-cyan);
+    background-color: var(--surface-bg);
+}
+
+.btn-submit {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--primary-fixed-dim);
+    color: var(--primary-fixed-dim);
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.btn-submit:hover {
+    background: var(--primary-fixed-dim);
+    color: black;
 }

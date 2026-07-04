@@ -3,69 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>perfil Administrador</title>
      <link rel="stylesheet" href="../css/Admin-categorias.css">
     <link rel="stylesheet" href="../css/Admin-pages.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/Admin-categorias.css">
+    <link rel="stylesheet" href="../css/WebComponents.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
-<body>
-      <barra-lateral-admin></barra-lateral-admin>
+<body id="admin-principal">
+      <barra-lateral-admin class="active" ></barra-lateral-admin>
     <main class="main-content">
         <header>
-            <header-admin></header-admin>
+            <header-admin ></header-admin>
         </header>  
         <section>
-            <article>
-                
-                <div>
+            <article class="container-vistas">
+                <div class="form-card ">
                     <span>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined">
+                        category
+                        </span>
                         <h3>Categorias</h3>
                         <p>Organiza y segmenta tus experiencias por genero y estilo.</p>
                     </span>
-                    <button>Gestionar <img src="" alt=""></button>
+                    <a href="Categorias.html">
+                        <btn-primario> Gestionar </btn-primario>
+                    </a>
                 </div>
 
-                <div>
+                 <div class="form-card ">
                     <span>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined">
+                            event
+                        </span>
                         <h3>Eventos</h3>
                         <p>Control sobre fechas, lugares y disponibilidad en tiempo real</p>
                     </span>
-                    <button>Panel de eventos <img src="" alt=""></button>
+                    <a href="gestion-eventos.html">
+                    <btn-primario>Panel de eventos</btn-primario>
+                    </a>
                 </div>
 
-                <div>
+                <div class="form-card ">
                     <span>
-                        <img src="" alt="">
+                        <span class="material-symbols-outlined">
+                            Payments
+                        </span>
                         <h3>Ventas</h3>
                         <p>Analiza ingresos, tendencias y comportamientos de compra</p>
                     </span>
+                    <a href="Reporte-ventas.html">
                     <btn-primario>Ver Reportes</btn-primario>
+                    </a>
                 </div>
                 
             </article>
-            <article>
-                <div>
-                    <h3>Ventas Recientes</h3>
-                    <a href="Reporte-ventas.html">Ver Todo</a>
-                </div>
-                <table>
-                    <tr>
-                      <th>Fecha</th>
-                      <th>Cliente</th>
-                      <th>Evento</th>
-                      <th>Total</th>
-                    </tr>
+           <article>
 
-                    
-                    <tr>
-                    </tr>
+    <div class="category-grid-header">
+        <h3 class="category-grid-title">Ventas Recientes</h3>
 
-                  </table>
-            </article>
+        <a href="Reporte-ventas.html">
+            <btn-secundario>Ver Todo</btn-secundario>
+        </a>
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla">
+
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Evento</th>
+                    <th>Total</th>
+                </tr>
+                   
+                <tr>
+                   <td>Cargando...</td>
+                </tr>
+
+        
+
+
+        </table>
+
+    </div>
+
+</article>
         </section>
         <footer>
             <footer-admin></footer-admin>
@@ -74,7 +100,7 @@
 
 
 
-     <script src="../js/modulos-admin/categorias.js"></script>
+    <script src="../js/modulos-admin/categorias.js"></script>
     <script src="../js/storage.js"></script>
     <script src="../js/admin.js"></script>
     <script src="../js/components.js"></script>

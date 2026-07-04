@@ -10,7 +10,17 @@ customElements.define(
 
 );
 
+class BtnSecundario extends HTMLElement {
+    constructor(){
+        super();
+        this.classList.add("btn-submit")
+    }
+}
 
+customElements.define(
+    "btn-secundario", BtnSecundario
+);
+customElements.get("btn-secundario")
 class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -23,10 +33,12 @@ class Header extends HTMLElement {
                     <span>Categorías</span>
                 </div>
             </div>
-                <button class="btn-primary" id="btn-nueva-categoria">
-                    <span class="material-symbols-outlined"></span>
-                    Nueva Categoría
-                </button>
+               <a href="gestion-eventos.html">
+                 <btn-primario  id="btn-nueva-categoria">
+                    <span class="material-symbols-outlined"><img src="" alt=""></span>
+                    NEW EVENT
+                </btn-primario>
+               </a>
         </section>
         `;
     }
@@ -55,7 +67,7 @@ class Sidebar extends HTMLElement {
                 <span class="material-symbols-outlined"></span>
                 GESTIÓN DE EVENTOS
             </a>
-            <a href="Categorias.html" class="active">
+            <a href="Categorias.html">
                 <span class="material-symbols-outlined"></span>
                 CATEGORÍAS
             </a>
