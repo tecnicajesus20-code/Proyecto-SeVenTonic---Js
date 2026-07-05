@@ -124,7 +124,7 @@
     backdrop-filter: blur(12px);
     border: 1px solid rgba(132, 148, 149, 0.2);
     padding: 32px;
-    border-radius: 8px;
+    border-radius: 8px; 
 }
 
 .form-card h3 {
@@ -373,3 +373,5 @@
     border-color: var(--color-error);
     background: rgba(147,0,10,.15);
 }
+
+

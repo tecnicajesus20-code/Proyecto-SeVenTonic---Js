@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/Admin-pages.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/Admin-RegistroVentas.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/Admin-Eventos.css">
 </head>
 <body id="admin-eventos">
     <barra-lateral-admin></barra-lateral-admin>
@@ -18,36 +20,79 @@
         </header>  
         <section>
             <h1>Gestion de eventos</h1>
-            <article>
+                <article class="page-content-ventas metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">Festival</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Total de eventos</p>
+                            <h3 class="metric-value" id="total-ventas">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">Category</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Total de Categorias</p>
+                            <h3 class="metric-value" id="total-ingresos">$0</h3>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">Done</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Eventos culminados</p>
+                            <h3 class="metric-value" id="total-tickets">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">Newsstand</span>
+                        </div>
+                        <div>
+                            <p class="metric-label">Eventos publicados</p>
+                            <h3 class="metric-value" id="ticket-promedio">$0</h3>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+           <section class="container-events">
+             <article class="container-search">
                 <div>
-                    <h5>total de eventos</h5>
-                    <p>--</p>
+                     <btn-secundario>
+                        <span class="material-symbols-outlined">
+                        Add
+                        </span>
+                        Nuevo evento
+                    </btn-secundario>
                 </div>
-                <div>
-                    <h5>Total de Categorias</h5>
-                    <p>--</p>
-                </div>
-                <div>
-                    <h5>Total de ventas</h5>
-                    <p>--</p>
+                 <div class="metric-card ">
+                    <span class="material-symbols-outlined">
+                        Search
+                    </span>
+                    <input class="input-search" type="search" placeholder="Buscar por artista o fecha...">
                 </div>
             </article>
-            <article>
-                <div>
-                    <img src="" alt="">
-                    <input type="search" placeholder="Buscar por artista o fecha...">
-                </div>
-                <button>Crear evento</button>
-            </article>
-            <article>
-                <Div>
-                    <img src="" alt="">
+            <article class="metric-card cards-events">
+                    <span >
+                        <img class="img-event metric-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbLYigZX5usi6zP1Evf1tIwXzKQ487Btg4vwkGN0tWeOZABpkxk1734Jyk&s=10" alt="Cyberpunk">
+                    </span>
                     <span>
                         <p>Concierto</p>
                         <p>ID: #EV-3120</p>
                         <h4>Neon Nights: the afternoon</h4>
-                        <span>
-                            <img src="" alt="">
+                        <span class="person">
+                            <span class="material-symbols-outlined">
+                            Person
+                            </span>
                             <p>Cyber Synth</p>
                         </span>
                     </span>
@@ -56,19 +101,18 @@
                         <h5>24 OCT</h5>
                         <p>22:00 - club Matrix</p>
                     </span>
-                    <span>
-                        <h3>Publicado</h3>
-                        <button>
-                            <img src="" alt="">
-                        </button>
-                        <button>
-                            <img src="" alt="">
-                        </button>
+                    <h3>Publicado</h3>
+                    <span class="icone">
+                        <div class="metric-icon  icone">
+                            <span  class="material-symbols-outlined ">Edit</span>
+                        </div>
+                        <div class="metric-icon icone">
+                            <span class="material-symbols-outlined ">Delete</span>
+                        </div>
                     </span>
-                </Div>
-            </article>
-
-        </section>
+                 </article>
+           </section>
+         
         <footer>
              <footer-admin></footer-admin>
         </footer>

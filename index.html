@@ -4,18 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SevenTonic</title>
+   <link rel="stylesheet" href="css/Admin-categorias.css">
     <link rel="stylesheet" href="css/Admin-pages.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/WebComponents.css">
+    <link rel="stylesheet" href="css/Admin-RegistroVentas.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/home-Usuario.css">
 </head>
 <body>
     <main>
         <header>
-
+            
         </header>
         <section>
 
         </section>
+          <!-- ////////////////////////////////////
+            MODALES DE EVENTOS
+           ////////////////////////////////////-->
+           <section class="none">
+                 <article class="form-Eventos">
+                    <div class="form-card" style="height: 100%;">
+                        <h3 id="title-compra">FINALIZAR COMPRA</h3>
+                         <form id="form-compra">
+                        <div class="form-group">
+                            <label for="event-name">Nombre completo</label>
+                            <input id="event-name" type="text" placeholder="Ej: AmericanFest" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-org">Nombre de la Organizacion encargada</label>
+                            <input id="event-org" type="text" placeholder="Ej: SevenTonic" >
+                        </div>
+                         
+                        <div class="form-group"  >
+                            <label for="event-categorias">Seleciona la categoria del evento</label>
+                            <select id="event-categorias" class="filter-select" style="width: 100%;">
+                                <option value="">Seleccion una...</option>
+                            </select>
+                        </div>
+                        <div class="form-group"  >
+                            <label for="event-ciudad">Seleciona la ciudad donde se realizara el evento</label>
+                            <select id="event-ciudad" class="filter-select" style="width: 100%;">
+                                <option value="">Seleccion una...</option>
+                            </select>
+                        </div>
+                        <article style="display: flex;">
+                        <div class="form-group" style="width: 50%;">
+                            <label for="event-fechaInicio">Fecha de Inicio</label>
+                            <input id="event-fechaInicio" type="datetime-local" placeholder="Ej: SevenTonic" >
+                        </div>
+                        <div class="form-group" style="width: 50%;" >
+                            <label for="event-fechaFinal">Fecha de Finalizacion</label>
+                            <input id="event-fechaFinal" type="datetime-local" placeholder="Ej: SevenTonic" >
+                        </div>
+                        </article>
+                        <div class="form-group">
+                            <label for="input-descripcion">Descripción</label>
+                            <textarea id="input-descripcion"
+                                placeholder="Breve descripción del evento..."></textarea>
+                        </div>
+                        <article style="display: flex; justify-content: space-between;">
+                        <btn-secundario class="btn-submit" type="submit" id="btn-guardar">
+                            GUARDAR CATEGORÍA
+                        </btn-secundario>
+                        <btn-secundario class="btn-cancel" type="button" id="btn-cancelar-edicion">
+                            Cerrar
+                        </btn-secundario>
+                        </article>
+                    </form>
+                </div>
+                 </article>
+           </section>
     </main>
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>

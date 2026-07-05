@@ -1,0 +1,77 @@
+.container-events {
+    text-align: justify;
+    gap: 20px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(132, 148, 149, 0.2);
+    border-radius: 8px;
+    margin: 5vh;
+}
+.container-search {
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    margin-left: 15vh;
+    margin-bottom: 20px;
+}
+.cards-events {
+    margin-left: 15vh;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.icone{
+    display: flex;
+    cursor: pointer;
+    margin:10px;
+    transition: all 0.3s;
+}
+.icone:hover{
+    transform: translateY(-2px);
+}
+
+.input-search {
+    display: flex;
+    color: var(--sobre-superficie-variante);
+    font-family: 'JetBrains Mono', monospace;
+    align-items: center;
+    gap: 1vh;
+    padding: 8px;
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+.person{
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+}
+
+.img-event{
+    object-fit: cover;
+    max-height: 100px;
+    height: min-content;
+    width: auto;
+}
+
+/* /////////////////////////////////
+MODALES EVENTOS 
+/////////////////////////////*/
+
+/* .none{
+      display: none;
+} */
+
+.form-Eventos{
+    position: fixed;
+    top: 0;
+    right: 8;
+    left: 8;
+    width: 100%;
+
+    height: 100%;
+    justify-content: center;
+    z-index: 1000;
+}
