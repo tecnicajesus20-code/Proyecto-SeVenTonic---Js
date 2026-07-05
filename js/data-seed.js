@@ -22,7 +22,7 @@ const eventosIniciales = [
         fecha: "2026-07-20",
         hora: "19:00",
         ciudad: "Bogotá",
-        imagen: "assets/img/rock-parque.jpg",
+        imagen: "https://picsum.photos/seed/rockparque/120/120", // 👈 placeholder online
         descripcion: "El festival de rock más grande de Colombia"
     },
     {
@@ -34,7 +34,7 @@ const eventosIniciales = [
         fecha: "2026-08-15",
         hora: "20:30",
         ciudad: "Medellín",
-        imagen: "assets/img/metallica.jpg",
+        imagen: "https://picsum.photos/seed/metallica/120/120",
         descripcion: "La legendaria banda de thrash metal"
     },
     {
@@ -46,7 +46,7 @@ const eventosIniciales = [
         fecha: "2026-08-15",
         hora: "20:00",
         ciudad: "Medellín",
-        imagen: "assets/img/pop-fest.jpg",
+        imagen: "https://picsum.photos/seed/popfest/120/120",
         descripcion: "Lo mejor del pop internacional"
     },
     {
@@ -58,7 +58,7 @@ const eventosIniciales = [
         fecha: "2026-10-05",
         hora: "21:00",
         ciudad: "Bogotá",
-        imagen: "assets/img/karol-g.jpg",
+        imagen: "https://picsum.photos/seed/karolg/120/120",
         descripcion: "La Bichota trae su gira a Colombia"
     },
     {
@@ -70,7 +70,7 @@ const eventosIniciales = [
         fecha: "2026-09-25",
         hora: "14:00",
         ciudad: "Barranquilla",
-        imagen: "assets/img/ultra-colombia.jpg",
+        imagen: "https://picsum.photos/seed/ultra/120/120",
         descripcion: "El festival de música electrónica más grande"
     },
     {
@@ -82,7 +82,7 @@ const eventosIniciales = [
         fecha: "2026-12-10",
         hora: "18:00",
         ciudad: "Bogotá",
-        imagen: "assets/img/final-futbol.jpg",
+        imagen: "https://picsum.photos/seed/futbol/120/120",
         descripcion: "La gran final del fútbol colombiano"
     },
     {
@@ -94,7 +94,7 @@ const eventosIniciales = [
         fecha: "2026-09-05",
         hora: "18:30",
         ciudad: "Cali",
-        imagen: "assets/img/jazz-fest.jpg",
+        imagen: "https://picsum.photos/seed/jazz/120/120",
         descripcion: "El festival de jazz más importante del país"
     },
     {
@@ -106,7 +106,7 @@ const eventosIniciales = [
         fecha: "2026-07-15",
         hora: "12:00",
         ciudad: "Santa Marta",
-        imagen: "assets/img/festival-verano.jpg",
+        imagen: "https://picsum.photos/seed/verano/120/120",
         descripcion: "3 días de música y playa en el caribe"
     }
 ];
@@ -150,4 +150,4 @@ function inicializarDatos() {
 // Ejecutar al cargar
 inicializarDatos();
 
-console.log("📦 data-seed.js cargado");
+console.log("📦 data-seed.js cargado con imágenes placeholder");

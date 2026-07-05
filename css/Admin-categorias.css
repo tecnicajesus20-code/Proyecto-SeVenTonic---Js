@@ -196,7 +196,7 @@
      justify-content: space-between;
      align-items: center;
      margin-bottom: 24px;
-     margin: 0vh 5vh 0vh 5vh ;
+     margin: 0vh 5vh 0vh 5vh;
  }
 
  .category-grid-title {
@@ -445,6 +445,7 @@
      color: #e9feff;
      border: 1px solid var(--cian-neon);
  }
+
 
  /* ============================================
            ANIMACIONES

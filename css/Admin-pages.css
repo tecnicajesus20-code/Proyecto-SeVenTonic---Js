@@ -43,8 +43,8 @@
     padding: 48px 64px;
     border-top: 1px solid rgba(58, 73, 74, 0.2);
     display: grid;
-     min-height: 100vh;
-     grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 .footer-grid {
@@ -250,6 +250,7 @@
         opacity: 0.4;
     }
 }
+
 .container-vistas {
     margin: 10vh;
     display: grid;
@@ -261,7 +262,7 @@
 /* ============================================
                 TABLA
 ============================================ */
-.tabla-contenedor{
+.tabla-contenedor {
     background: var(--contenedor-superficie);
     border: 1px solid var(--borde-contorno-variante);
     border-radius: 10px;
@@ -271,7 +272,7 @@
     margin: 5vh;
 }
 
-.tabla{
+.tabla {
     width: 100%;
     min-width: 800px;
     border-collapse: collapse;
@@ -282,7 +283,7 @@
 
 
 
-.tabla tr th{
+.tabla tr th {
     background-color: var(--contenedor-superficie-mas-alto);
     padding: 18px;
     text-align: left;
@@ -293,7 +294,7 @@
     color: var(--primario-fijo-tenue);
 }
 
-.tabla tr td{
+.tabla tr td {
     padding: 18px;
     font-size: 14px;
     color: var(--sobre-superficie);
@@ -301,11 +302,11 @@
 }
 
 
-.tabla tr:hover{
+.tabla tr:hover {
     background: var(--contenedor-superficie-alto);
 }
 
-.tabla tr:last-child td{
+.tabla tr:last-child td {
     border-bottom: none;
 }
 
@@ -313,7 +314,7 @@
                 ESTADOS
 ============================================ */
 
-.estado{
+.estado {
     display: inline-block;
     padding: 6px 14px;
     border-radius: 20px;
@@ -324,20 +325,20 @@
     letter-spacing: .08em;
 }
 
-.estado-pagado{
-    background: rgba(0,220,229,.15);
+.estado-pagado {
+    background: rgba(0, 220, 229, .15);
     color: var(--primario-fijo-tenue);
-    border: 1px solid rgba(0,220,229,.3);
+    border: 1px solid rgba(0, 220, 229, .3);
 }
 
-.estado-pendiente{
-    background: rgba(157,0,255,.15);
+.estado-pendiente {
+    background: rgba(157, 0, 255, .15);
     color: var(--purpura-neon);
-    border: 1px solid rgba(157,0,255,.3);
+    border: 1px solid rgba(157, 0, 255, .3);
 }
 
-.estado-cancelado{
-    background: rgba(147,0,10,.2);
+.estado-cancelado {
+    background: rgba(147, 0, 10, .2);
     color: var(--color-error);
     border: 1px solid var(--contenedor-error);
 }
@@ -346,12 +347,12 @@
                 BOTONES
 ============================================ */
 
-.acciones{
+.acciones {
     display: flex;
     gap: 8px;
 }
 
-.acciones button{
+.acciones button {
     width: 36px;
     height: 36px;
     border: 1px solid transparent;
@@ -362,14 +363,14 @@
     transition: .3s;
 }
 
-.acciones button:hover{
+.acciones button:hover {
     color: var(--primario-fijo-tenue);
     border-color: var(--primario-fijo-tenue);
-    background: rgba(0,220,229,.08);
+    background: rgba(0, 220, 229, .08);
 }
 
-.acciones .btn-eliminar:hover{
+.acciones .btn-eliminar:hover {
     color: var(--color-error);
     border-color: var(--color-error);
-    background: rgba(147,0,10,.15);
+    background: rgba(147, 0, 10, .15);
 }

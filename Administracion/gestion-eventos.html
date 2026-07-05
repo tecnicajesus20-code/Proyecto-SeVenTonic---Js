@@ -1,83 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
-   <link rel="stylesheet" href="../css/Admin-categorias.css">
-    <link rel="stylesheet" href="../css/Admin-pages.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/WebComponents.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Eventos · SeVenTonic</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/Admin-GestionEventos.css" />
+    <link rel="stylesheet" href="../css/Admin-categorias.css" />
+    <link rel="stylesheet" href="../css/Admin-pages.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/WebComponents.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
 </head>
+
 <body id="admin-eventos">
     <barra-lateral-admin></barra-lateral-admin>
+
     <main class="main-content">
         <header>
             <header-admin></header-admin>
-        </header>  
+        </header>
+
+
         <section>
-            <h1>Gestion de eventos</h1>
-            <article>
+            <h1>Gestión de eventos</h1>
+
+            <article id="stats-container">
                 <div>
-                    <h5>total de eventos</h5>
-                    <p>--</p>
+                    <h5>Total de Eventos</h5>
+                    <p id="total-eventos">--</p>
                 </div>
                 <div>
-                    <h5>Total de Categorias</h5>
-                    <p>--</p>
+                    <h5>Total de Categorías</h5>
+                    <p id="total-categorias">--</p>
                 </div>
                 <div>
-                    <h5>Total de ventas</h5>
-                    <p>--</p>
+                    <h5>Total de Ventas</h5>
+                    <p id="total-ventas">--</p>
                 </div>
             </article>
             <article>
                 <div>
-                    <img src="" alt="">
-                    <input type="search" placeholder="Buscar por artista o fecha...">
+
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="search" id="search-input" placeholder="Buscar por artista o fecha..." />
                 </div>
-                <button>Crear evento</button>
-            </article>
-            <article>
-                <Div>
-                    <img src="" alt="">
-                    <span>
-                        <p>Concierto</p>
-                        <p>ID: #EV-3120</p>
-                        <h4>Neon Nights: the afternoon</h4>
-                        <span>
-                            <img src="" alt="">
-                            <p>Cyber Synth</p>
-                        </span>
-                    </span>
-                    <span>
-                        <h6>Fecha</h6>
-                        <h5>24 OCT</h5>
-                        <p>22:00 - club Matrix</p>
-                    </span>
-                    <span>
-                        <h3>Publicado</h3>
-                        <button>
-                            <img src="" alt="">
-                        </button>
-                        <button>
-                            <img src="" alt="">
-                        </button>
-                    </span>
-                </Div>
+                <button id="btn-crear-evento" class="btn-primary">
+                    <span class="material-symbols-outlined">add</span>
+                    Crear evento
+                </button>
             </article>
 
+            <article>
+                <div id="eventos-list">
+                </div>
+            </article>
         </section>
+        <!-- ========================================= -->
+        <!-- MODAL PARA CREAR / EDITAR EVENTOS        -->
+        <!-- ========================================= -->
+        <div id="modal-evento" class="modal-overlay" style="display:none;">
+            <div class="modal-contenido">
+                <!-- Botón cerrar (X) -->
+                <span class="modal-cerrar" id="btn-cerrar-modal">&times;</span>
+
+                <!-- Título dinámico: "Nuevo Evento" o "Editar Evento" -->
+                <h2 id="modal-titulo">Nuevo Evento</h2>
+
+                <!-- Formulario -->
+                <form id="form-evento">
+                    <!-- Campo oculto para guardar el ID del evento (si es edición) -->
+                    <input type="hidden" id="evento-id" value="">
+
+                    <!-- Nombre -->
+                    <label for="nombre">Nombre del evento *</label>
+                    <input type="text" id="nombre" placeholder="Ej: Rock al Parque" required>
+
+                    <!-- Categoría (select dinámico) -->
+                    <label for="categoria">Categoría *</label>
+                    <select id="categoria" required>
+                        <!-- Se llenará con JS -->
+                    </select>
+
+                    <!-- Precio -->
+                    <label for="precio">Precio (COP) *</label>
+                    <input type="number" id="precio" placeholder="85000" required>
+
+                    <!-- Fecha -->
+                    <label for="fecha">Fecha *</label>
+                    <input type="date" id="fecha" required>
+
+                    <!-- Hora -->
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" value="19:00">
+
+                    <!-- Ciudad -->
+                    <label for="ciudad">Ciudad *</label>
+                    <input type="text" id="ciudad" placeholder="Bogotá" required>
+
+                    <!-- Descripción -->
+                    <label for="descripcion">Descripción / Artista</label>
+                    <textarea id="descripcion" placeholder="Breve descripción del evento"></textarea>
+
+                    <!-- URL de imagen -->
+                    <label for="imagen">URL de la imagen</label>
+                    <input type="url" id="imagen" placeholder="https://ejemplo.com/imagen.jpg">
+
+                    <!-- Botón guardar -->
+                    <button type="submit" class="btn-primary" id="btn-guardar-evento">
+                        Guardar Evento
+                    </button>
+                </form>
+            </div>
+        </div>
         <footer>
-             <footer-admin></footer-admin>
+            <footer-admin></footer-admin>
         </footer>
     </main>
-    <script src="../js/modulos-admin/gestion-eventos.js" ></script>
+
+    <!-- Scripts -->
+    <script src="../js/modulos-admin/gestion-eventos.js"></script>
     <script src="../js/storage.js"></script>
     <script src="../js/admin.js"></script>
     <script src="../js/components.js"></script>
     <script src="../js/data-seed.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>
