@@ -34,81 +34,80 @@
 }
 
 /* ============================================
-           Footer
-           ============================================ */
-/* Admin Footer Styles */
+   FOOTER ADMIN - ESTILOS BASE
+   ============================================ */
 .admin-footer {
-    margin-top: 5vh;
     background: var(--contenedor-superficie-mas-bajo);
-    padding: 48px 64px;
-    border-top: 1px solid rgba(58, 73, 74, 0.2);
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    border-top: 1px solid rgba(58, 73, 74, 0.3);
+    padding: 32px 64px;
+    margin-top: 40px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-logo {
-    font-family: 'Space Grotesk', sans-serif;
     font-size: 28px;
     color: var(--primario-fijo-tenue);
+    font-weight: 700;
 }
 
 .footer-copyright {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--sobre-superficie-variante);
+    font-size: 12px;
+    color: var(--borde-contorno);
     margin-top: 8px;
 }
 
 .footer-title {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--borde-contorno);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sobre-superficie);
     text-transform: uppercase;
-    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
 }
 
 .footer-links {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-link {
     color: var(--sobre-superficie-variante);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
+    transition: color 0.3s;
+    display: block;
+    padding: 4px 0;
+}
+
+.footer-link:hover {
+    color: var(--primario-fijo-tenue);
 }
 
 .footer-status {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .footer-status-dot {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: var(--primario-fijo-tenue);
-    animation: pulse 2s infinite;
+    background: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
 }
 
 .footer-status-text {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--primario-fijo-tenue);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 13px;
+    color: var(--sobre-superficie-variante);
 }
 
 /* ============================================

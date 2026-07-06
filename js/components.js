@@ -93,8 +93,11 @@ class Sidebar extends HTMLElement {
             <div class="sidebar-header">
                 <h2 class="sidebar-logo footer-logo">SeVenTonic</h2>
                 <p class="sidebar-label">ADMIN PANEL</p>
+                <button type="button" class="menu-toggle" id="btn-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
-            <nav class="sidebar-nav">
+            <nav class="sidebar-nav" id="sidebar-nav">
                 ${enlaces}
                 <a href="../index.html" class="logout" id="btn-cerrar-sesion">
                     <span class="material-symbols-outlined">logout</span>
@@ -113,6 +116,26 @@ class Sidebar extends HTMLElement {
                 </div>
             </div>
         </aside>`;
+
+        // --- Lógica del menú hamburguesa ---
+        const btnToggle = this.querySelector("#btn-menu-toggle");
+        const nav = this.querySelector("#sidebar-nav");
+        const icono = btnToggle.querySelector(".material-symbols-outlined");
+
+        btnToggle.addEventListener("click", () => {
+            const abierto = nav.classList.toggle("menu-open");
+            btnToggle.setAttribute("aria-expanded", abierto);
+            icono.textContent = abierto ? "close" : "menu";
+        });
+
+        // Cierra el menú al elegir una opción (mejor UX en móvil)
+        nav.querySelectorAll("a").forEach((enlace) => {
+            enlace.addEventListener("click", () => {
+                nav.classList.remove("menu-open");
+                btnToggle.setAttribute("aria-expanded", "false");
+                icono.textContent = "menu";
+            });
+        });
     }
 }
 
