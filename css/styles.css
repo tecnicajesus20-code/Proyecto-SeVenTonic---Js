@@ -1,46 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration-line: none;
-}
-
-:root {
-    --cian-neon: #00dce5;
-    --purpura-neon: #9d00ff;
-    --fondo-superficie: #0d1515;
-    --contenedor-superficie: #192121;
-    --contenedor-superficie-bajo: #151d1d;
-    --contenedor-superficie-mas-bajo: #081010;
-    --contenedor-superficie-alto: #232b2b;
-    --contenedor-superficie-mas-alto: #2e3636;
-    --sobre-superficie: #dce4e4;
-    --sobre-superficie-variante: #b9caca;
-    --borde-contorno: #849495;
-    --borde-contorno-variante: #3a494a;
-    --primario-fijo-tenue: #00dce5;
-    --color-error: #ffb4ab;
-    --contenedor-error: #93000a;
-    --color-boton-primario: #00f5ff;
-    --fondo-secundario: #323b3b;
-    --color-letra: #dadada;
-}
-
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    text-decoration-line: none;
+
+}
+
+
+
+:root {
+
+    --cian-neon: #00dce5;
+
+    --purpura-neon: #9d00ff;
+
+    --fondo-superficie: #0d1515;
+
+    --contenedor-superficie: #192121;
+
+    --contenedor-superficie-bajo: #151d1d;
+
+    --contenedor-superficie-mas-bajo: #081010;
+
+    --contenedor-superficie-alto: #232b2b;
+
+    --contenedor-superficie-mas-alto: #2e3636;
+
+    --sobre-superficie: #dce4e4;
+
+    --sobre-superficie-variante: #b9caca;
+
+    --borde-contorno: #849495;
+
+    --borde-contorno-variante: #3a494a;
+
+    --color-error: #ffb4ab;
+
+    --contenedor-error: #93000a;
+
+    --color-boton-primario: #00f5ff;
+
+    --fondo-secundario: #323b3b;
+
+    --color-letra: #dadada;
+
+}
+
+
+
+.material-symbols-outlined {
+
+    font-family: 'Material Symbols Outlined';
+
+    font-weight: normal;
+
+    font-style: normal;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    letter-spacing: normal;
+
+    text-transform: none;
+
+    display: inline-block;
+
+    white-space: nowrap;
+
+    word-wrap: normal;
+
+    direction: ltr;
+
+    font-feature-settings: 'liga';
+
+    -webkit-font-smoothing: antialiased;
+
+}
+

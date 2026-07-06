@@ -8,12 +8,10 @@
     margin: 5vh;
 }
 .container-search {
-    display: flex; 
-    justify-content: center;
-    gap: 20px;
-    width: 80%;
-    margin-left: 15vh;
-    margin-bottom: 20px;
+    display: flex;
+    background-color: var(--fondo-superficie);
+    padding: 2px;
+    justify-content: end;
 }
 .cards-events {
     margin-left: 15vh;
@@ -36,7 +34,6 @@
     color: var(--sobre-superficie-variante);
     font-family: 'JetBrains Mono', monospace;
     align-items: center;
-    gap: 1vh;
     padding: 8px;
     width: 100%;
     background: none;
@@ -47,6 +44,17 @@
     display: flex; 
     align-items: center; 
     gap: 5px;
+}
+
+.nav {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color:var(--cian-neon) ;
+    text-underline-offset: 5px;
+    transition: all 1s ease;
+}
+.nav:hover{
+   text-decoration-color:var(--sobre-superficie-variante) ;
 }
 
 .img-event{
@@ -60,9 +68,9 @@
 MODALES EVENTOS 
 /////////////////////////////*/
 
-/* .none{
+.none{
       display: none;
-} */
+}
 
 .form-Eventos{
     position: fixed;
@@ -74,4 +82,586 @@ MODALES EVENTOS
     height: 100%;
     justify-content: center;
     z-index: 1000;
+}
+/* ==========================================================================
+   Configuración General de Estilos de Base
+   ========================================================================== */
+body {
+    background-color: #050505;
+    color: #e4e1e6;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* Soporte de alineación nativa para iconos de Google */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   Efectos Visuales Avanzados e Identidad Visual (Neon & Glassmorphism)
+   ========================================================================== */
+.glass-card {
+    background: rgba(22, 22, 29, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 220, 229, 0.25);
+}
+
+.neon-glow-magenta {
+    box-shadow: 0 0 15px rgba(255, 36, 228, 0.25);
+}
+
+.active-card-tilt {
+    transform: rotate(2deg) scale(1.02);
+    border: 2px solid #00dce5;
+    box-shadow: 0 0 30px rgba(0, 220, 229, 0.3);
+}
+
+.page-gradient {
+    background: radial-gradient(circle at center, rgba(255, 36, 228, 0.12) 0%, transparent 70%),
+                radial-gradient(circle at bottom right, rgba(0, 220, 229, 0.08) 0%, transparent 50%);
+}
+
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #00dce5, #252727);
+}
+
+/* Animación del Ticker de Noticias */
+.marquee-text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee infinite linear 20s;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ==========================================================================
+   Componentes de Diseño (Estructura y Layout)
+   ========================================================================== */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(13, 21, 21, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(58, 73, 74, 0.3);
+    box-shadow: 0 0 20px rgba(0, 220, 229, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    items-align: center;
+    align-items: center;
+    padding: 1rem 64px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: #b9caca;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link-active {
+    color: #00dce5;
+    text-shadow: 0 0 8px rgba(0, 220, 229, 0.8);
+}
+
+.nav-link-active {
+    border-bottom: 2px solid #00dce5;
+    padding-bottom: 0.25rem;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background-color: #232b2b;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(58, 73, 74, 0.5);
+    transition: all 0.3s;
+}
+
+.search-bar-container:focus-within {
+    border-color: #00dce5;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e4e1e6;
+    width: 12rem;
+}
+
+.search-input::placeholder {
+    color: #b9caca;
+}
+
+/* Contenedor Base */
+.main-layout {
+    padding-top: 6rem;
+    min-height: 100vh;
+}
+
+.atmospheric-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 819px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Sección Hero */
+.hero-section {
+    position: relative;
+    padding: 5rem 64px 3rem 64px;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-center: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.hero-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #dce4e4;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: #b9caca;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* Botones del Sistema */
+.btn-primary {
+    background: linear-gradient(to right, #00dce5, #454747);
+    color: #0d1515;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.btn-cta {
+    background: linear-gradient(to right, #454747, #00f5ff, #00dce5);
+    color: #0d1515;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+}
+
+.btn-cta:hover {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+}
+
+.icon-button {
+    padding: 0.5rem;
+    color: #b9caca;
+    transition: all 0.3s;
+}
+
+.icon-button:hover {
+    color: #00dce5;
+}
+
+/* ==========================================================================
+   Componente del Sistema de Filtros
+   ========================================================================== */
+.filters-section {
+    padding: 0 64px 3rem 64px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+}
+
+.filters-wrapper {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    border-color: rgba(58, 73, 74, 0.3);
+}
+
+@media (min-width: 768px) {
+    .filters-wrapper {
+        flex-direction: row;
+    }
+}
+
+.filter-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #00dce5;
+    text-transform: uppercase;
+    tracking-width: 0.1em;
+    margin-left: 0.5rem;
+}
+
+.filter-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #232b2b;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(58, 73, 74, 0.5);
+    transition: all 0.3s;
+}
+
+.filter-input-wrapper:focus-within {
+    border-color: #00dce5;
+}
+
+.filter-select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #dce4e4;
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.filter-select option {
+    background-color: #232b2b;
+}
+
+.filter-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #dce4e4;
+    width: 100%;
+}
+
+.filter-input::placeholder {
+    color: #b9caca;
+}
+
+.btn-filter {
+    background: linear-gradient(to right, #00dce5, #454747);
+    color: #0d1515;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.btn-filter:hover {
+    box-shadow: 0 0 20px rgba(0, 220, 229, 0.6);
+}
+
+/* ==========================================================================
+   Grilla y Tarjetas de Contenido (Event Cards)
+   ========================================================================== */
+.grid-section {
+    padding: 0 64px 4rem 64px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-cols: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .events-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .events-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.event-card {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-image-wrapper {
+    height: 16rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease;
+}
+
+.event-card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.badge-recommended {
+    background-color: #454747;
+    color: #e2e2e2;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.25rem;
+    color: #dce4e4;
+    font-weight: 700;
+}
+
+.card-info {
+    color: #b9caca;
+    font-size: 0.875rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    color: #00dce5;
+}
+
+.arrow-icon {
+    color: #b9caca;
+    transition: color 0.3s;
+}
+
+.event-card:hover .arrow-icon {
+    color: #00dce5;
+}
+
+/* Elementos Internos de la Tarjeta Destacada */
+.ticket-code {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: #00dce5;
+}
+
+.btn-buy-tickets {
+    width: 100%;
+    background: linear-gradient(to right, #00f5ff, #454747);
+    color: #006c71;
+    font-weight: 700;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn-buy-tickets:hover {
+    background: #ffffff;
+    color: #050505;
+}
+
+/* ==========================================================================
+   Sección del Banner de Noticias e Informativos
+   ========================================================================== */
+.news-ticker-container {
+    width: 100%;
+    background-color: #081010;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(58, 73, 74, 0.2);
+    border-bottom: 1px solid rgba(58, 73, 74, 0.2);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.news-ticker-container .marquee-text {
+    font-family: 'JetBrains Mono', monospace;
+    color: #c6c6c6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Estructura Global del Pie de Página (Footer Components)
+   ========================================================================== */
+.main-footer {
+    background-color: #081010;
+    width: 100%;
+    padding: 3rem 64px;
+    border-top: 1px solid rgba(58, 73, 74, 0.2);
+}
+
+.footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-cols: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .footer-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.footer-description {
+    color: #b9caca;
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.social-icon {
+    padding: 0.5rem;
+    border: 1px solid #849495;
+    border-radius: 9999px;
+    color: #c6c6c6;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    color: #e2e2e2;
+    transform: scale(1.1);
+}
+
+.footer-title {
+    font-family: 'JetBrains Mono', monospace;
+    color: #dce4e4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #b9caca;
+}
+
+.footer-link {
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #e2e2e2;
+}
+
+.newsletter-input {
+    background-color: #0d1515;
+    border: 1px solid #849495;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #e4e1e6;
+}
+
+.newsletter-input:focus {
+    border-color: #454747;
+    box-shadow: none;
+}
+
+.btn-newsletter {
+    background-color: #454747;
+    color: #e2e2e2;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.footer-bottom {
+    max-width: 1280px;
+    margin: 3rem auto 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(58, 73, 74, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+    }
+}
+
+.footer-copyright {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #b9caca;
+}
+
+.status-indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #22c55e;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

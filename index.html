@@ -11,72 +11,73 @@
     <link rel="stylesheet" href="css/Admin-RegistroVentas.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/home-Usuario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;700&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <main>
+<body class="font-body text-base selection:bg-cyan-500/30 selection:text-white">
         <header>
-            
+            <header-user></header-user>
         </header>
-        <section>
 
-        </section>
-          <!-- ////////////////////////////////////
-            MODALES DE EVENTOS
-           ////////////////////////////////////-->
-           <section class="none">
-                 <article class="form-Eventos">
-                    <div class="form-card" style="height: 100%;">
-                        <h3 id="title-compra">FINALIZAR COMPRA</h3>
-                         <form id="form-compra">
-                        <div class="form-group">
-                            <label for="event-name">Nombre completo</label>
-                            <input id="event-name" type="text" placeholder="Ej: AmericanFest" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="event-org">Nombre de la Organizacion encargada</label>
-                            <input id="event-org" type="text" placeholder="Ej: SevenTonic" >
-                        </div>
-                         
-                        <div class="form-group"  >
-                            <label for="event-categorias">Seleciona la categoria del evento</label>
-                            <select id="event-categorias" class="filter-select" style="width: 100%;">
-                                <option value="">Seleccion una...</option>
-                            </select>
-                        </div>
-                        <div class="form-group"  >
-                            <label for="event-ciudad">Seleciona la ciudad donde se realizara el evento</label>
-                            <select id="event-ciudad" class="filter-select" style="width: 100%;">
-                                <option value="">Seleccion una...</option>
-                            </select>
-                        </div>
-                        <article style="display: flex;">
-                        <div class="form-group" style="width: 50%;">
-                            <label for="event-fechaInicio">Fecha de Inicio</label>
-                            <input id="event-fechaInicio" type="datetime-local" placeholder="Ej: SevenTonic" >
-                        </div>
-                        <div class="form-group" style="width: 50%;" >
-                            <label for="event-fechaFinal">Fecha de Finalizacion</label>
-                            <input id="event-fechaFinal" type="datetime-local" placeholder="Ej: SevenTonic" >
-                        </div>
-                        </article>
-                        <div class="form-group">
-                            <label for="input-descripcion">Descripción</label>
-                            <textarea id="input-descripcion"
-                                placeholder="Breve descripción del evento..."></textarea>
-                        </div>
-                        <article style="display: flex; justify-content: space-between;">
-                        <btn-secundario class="btn-submit" type="submit" id="btn-guardar">
-                            GUARDAR CATEGORÍA
-                        </btn-secundario>
-                        <btn-secundario class="btn-cancel" type="button" id="btn-cancelar-edicion">
-                            Cerrar
-                        </btn-secundario>
-                        </article>
-                    </form>
+    <main class="main-layout page-gradient relative">
+        <div class="atmospheric-glow"></div>
+        
+        <section class="hero-section">
+            <div class="">
+                <h1 class="hero-title">
+                    SUMÉRGETE EN EL <span class="gradient-text">RITMO</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Descubre los mejores conciertos, diseñados para ti. La energía del directo en la palma de tu mano.
+                </p>
+                <div class="">
                 </div>
-                 </article>
-           </section>
+            </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="glass-card filters-wrapper neon-glow-cyan">
+                <div class="">
+                    <label class="filter-label">Cuándo</label>
+                    <div class="filter-input-wrapper">
+                        <span class="material-symbols-outlined ">calendar_today</span>
+                        <select class="filter-select">
+                            <option>Este fin de semana</option>
+                            <option>Próxima semana</option>
+                            <option>Este mes</option>
+                            <option>Seleccionar rango...</option>
+                        </select>
+                        <span class="material-symbols-outlined ">expand_more</span>
+                    </div>
+                </div>
+                <div class="">
+                    <label class="filter-label">Dónde</label>
+                    <div class="filter-input-wrapper">
+                        <span class="material-symbols-outlined ">location_on</span>
+                        <input class="filter-input" placeholder="Ciudad o recinto..." type="text">
+                    </div>
+                </div>
+                <div class="">
+                    <button class="btn-filter">
+                        <span class="material-symbols-outlined">tune</span>
+                        FILTRAR
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-section">
+            
+        </section>
+    </main>
+     <footer>
+            <footer-admin></footer-admin>
+        </footer>
+    
     </main>
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>
@@ -84,3 +85,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
