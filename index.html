@@ -4,18 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SevenTonic</title>
+   <link rel="stylesheet" href="css/Admin-categorias.css">
     <link rel="stylesheet" href="css/Admin-pages.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/WebComponents.css">
+    <link rel="stylesheet" href="css/Admin-RegistroVentas.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/home-Usuario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;700&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <main>
+<body class="font-body text-base selection:bg-cyan-500/30 selection:text-white">
         <header>
-
+            <header-user></header-user>
         </header>
-        <section>
 
+    <main class="main-layout page-gradient relative">
+        <div class="atmospheric-glow"></div>
+        
+        <section class="hero-section">
+            <div class="">
+                <h1 class="hero-title">
+                    SUMÉRGETE EN EL <span class="gradient-text">RITMO</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Descubre los mejores conciertos, diseñados para ti. La energía del directo en la palma de tu mano.
+                </p>
+                <div class="">
+                </div>
+            </div>
         </section>
+
+        <section class="filters-section">
+            <div class="glass-card filters-wrapper neon-glow-cyan">
+                <div class="">
+                    <label class="filter-label">Cuándo</label>
+                    <div class="filter-input-wrapper">
+                        <span class="material-symbols-outlined ">calendar_today</span>
+                        <select class="filter-select">
+                            <option>Este fin de semana</option>
+                            <option>Próxima semana</option>
+                            <option>Este mes</option>
+                            <option>Seleccionar rango...</option>
+                        </select>
+                        <span class="material-symbols-outlined ">expand_more</span>
+                    </div>
+                </div>
+                <div class="">
+                    <label class="filter-label">Dónde</label>
+                    <div class="filter-input-wrapper">
+                        <span class="material-symbols-outlined ">location_on</span>
+                        <input class="filter-input" placeholder="Ciudad o recinto..." type="text">
+                    </div>
+                </div>
+                <div class="">
+                    <button class="btn-filter">
+                        <span class="material-symbols-outlined">tune</span>
+                        FILTRAR
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-section">
+            
+        </section>
+    </main>
+     <footer>
+            <footer-admin></footer-admin>
+        </footer>
+    
     </main>
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>
@@ -23,3 +85,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+

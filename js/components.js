@@ -16,6 +16,8 @@ class BtnSecundario extends HTMLElement {
 
 customElements.define("btn-secundario", BtnSecundario);
 
+
+
 const paginasAdmin = {
     "Principaladmin.html": {
         titulo: "Administración",
@@ -36,7 +38,7 @@ const paginasAdmin = {
         titulo: "Registro de Ventas",
         breadcrumb: "Ventas",
         boton: null
-    }
+    },
 };
 
 function obtenerPaginaActual() {
@@ -51,7 +53,7 @@ class Header extends HTMLElement {
                     <span class="material-symbols-outlined">${pagina.boton.icono}</span>
                     ${pagina.boton.texto}
                </btn-primario>`
-            : "";
+               : "";
 
         this.innerHTML = `
         <section class="header">
@@ -67,6 +69,8 @@ class Header extends HTMLElement {
         </section>`;
     }
 }
+
+
 
 customElements.define("header-admin", Header);
 
@@ -117,7 +121,6 @@ class Sidebar extends HTMLElement {
 }
 
 customElements.define("barra-lateral-admin", Sidebar);
-
 class footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -156,3 +159,76 @@ class footer extends HTMLElement {
 }
 
 customElements.define("footer-admin", footer);
+
+
+class HeaderUsuario extends HTMLElement {
+    connectedCallback() {
+        const categorias = obtenerCategorias();
+        let listaCategory = "";
+        for (let i = 0; i < categorias.length; i++) {
+            listaCategory += `
+                <div>
+                    <span class="header-breadcrumb">
+                        ${categorias[i].nombre}
+                    </span>
+                </div>
+            `;
+        }
+        this.innerHTML = `
+            <section >
+                 <nav class="navbar-fixed">
+        <div class="navbar-container">
+            <div class="">
+                <div class="">
+                    <h2 class="footer-logo">SeVenTonic</h2>
+                    <div class="person nav">
+                         ${listaCategory}
+                    </div>
+                </div>
+            </div>
+            <div class=" items-center gap-4 ">
+                <div class="search-bar-container">
+                    <span class="material-symbols-outlined text-gray-400 mr-2">search</span>
+                    <input class="search-input" placeholder="Buscar eventos..." type="text">
+                </div>
+                <button class="icon-button">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+                <button class="btn-primary">Sign In</button>
+            </div>
+        </div>
+    </nav>
+            </section>
+        `;
+        console.log("Header cargado");
+        
+    }
+}
+
+customElements.define("header-user", HeaderUsuario);
+class CardEvent extends HTMLElement{
+    connectedCallback(){
+    const eventos = obtenerEventos()
+
+     this.innerHTML = `
+            <article class="events-grid">
+                <div class="event-card glass-card neon-glow-cyan">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3Ut0DGITbw_8crO0eQqjk-n26zmLqrk_3_bFrH_O6NUgW7ahPoe1MJgi5Eo-xAbB6M9AOv9lxjizklmsyu1Ow2WIQEYmluXSGhTqkCI8ad_rB59x0sVV6_jKp-ti4A_p2EP7iEsIwEkPr5wZ4GJhdQDZGllvrGQn-hXDaZuT4LvrzPiJtUbbJOLbRxWqHkNKNgCtzMEEaD4LEG3s86XZr0T3C2E8eOde-6DnbiIfdkxt4aeq8j0KH')"></div>
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-recommended">RECOMENDADO</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Artist Artist</h3>
+                        <p class="card-info">Próximo Evento: <span class="text-gray-300">Estadio</span></p>
+                        <div class="card-footer">
+                            <span class="card-tag"># ITTTECIA</span>
+                            <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        `;
+    }
+}

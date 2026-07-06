@@ -43,8 +43,11 @@
     padding: 48px 64px;
     border-top: 1px solid rgba(58, 73, 74, 0.2);
     display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+     width: 100%;
+     grid-template-rows: auto 1fr auto;
+     position: fixed;
+     bottom: 0;
+     z-index: 10000000;
 }
 
 .footer-grid {
@@ -58,7 +61,7 @@
 .footer-logo {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 28px;
-    color: var(--primario-fijo-tenue);
+    color: var(--cian-neon);
 }
 
 .footer-copyright {
@@ -124,7 +127,7 @@
     backdrop-filter: blur(12px);
     border: 1px solid rgba(132, 148, 149, 0.2);
     padding: 32px;
-    border-radius: 8px;
+    border-radius: 8px; 
 }
 
 .form-card h3 {
@@ -372,5 +375,12 @@
 .acciones .btn-eliminar:hover {
     color: var(--color-error);
     border-color: var(--color-error);
+<<<<<<< HEAD
     background: rgba(147, 0, 10, .15);
 }
+=======
+    background: rgba(147,0,10,.15);
+}
+
+
+>>>>>>> feacture/Usuario
