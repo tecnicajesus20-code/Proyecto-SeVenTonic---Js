@@ -198,29 +198,27 @@ class HeaderUsuario extends HTMLElement {
             `;
         }
         this.innerHTML = `
-            <section >
-                 <nav class="navbar-fixed">
-        <div class="navbar-container">
-            <div class="">
-                <div class="">
-                    <h2 class="footer-logo">SeVenTonic</h2>
-                    <div class="person nav">
-                         ${listaCategory}
+           <section >
+                 <nav class="navbar-fixed" ">
+                    <div class="navbar-container">
+                            <div class="">
+                                <h2 class="footer-logo">SeVenTonic</h2>
+                                <span class="person nav">
+                                ${listaCategory}
+                                </span>
+                            </div>
+                        <div style="display: flex; gap: 4vh;">
+                            <div class="search-bar-container">
+                                <span class="material-symbols-outlined ">search</span>
+                                <input class="search-input" placeholder="Buscar eventos..." type="text">
+                            </div>
+                                <button class="metric-icon">
+                                <span class="material-symbols-outlined">shopping_cart</span>
+                                </button>
+                                <btn-primario id="Sign" class ="btn">Ingresar como Admistrador</btn-primario>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class=" items-center gap-4 ">
-                <div class="search-bar-container">
-                    <span class="material-symbols-outlined text-gray-400 mr-2">search</span>
-                    <input class="search-input" placeholder="Buscar eventos..." type="text">
-                </div>
-                <button class="icon-button">
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                </button>
-                <button class="btn-primary">Sign In</button>
-            </div>
-        </div>
-    </nav>
+                </nav>
             </section>
         `;
         console.log("Header cargado");
