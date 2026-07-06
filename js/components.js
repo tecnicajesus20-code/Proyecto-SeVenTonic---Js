@@ -10,94 +10,101 @@ customElements.define(
 
 );
 
-    class Sidebar extends HTMLElement {
-
-        connectedCallback() {
-            this.innerHTML = `
-                <aside class="sidebar">
-                    <div class="sidebar-header">
-                        <div class="sidebar-logo">
-                            <h2 class="footer-logo">SeVenTonic</h2>
-                        </div>
-    
-                        <p class="sidebar-label">ADMIN PANEL</p>
-                    </div>
-    
-                    <nav class="sidebar-nav">
-                        <a href="../admin.html">PRINCIPAL</a>
-    
-                        <a href="gestion-eventos.html">
-                            GESTIÓN DE EVENTOS
-                        </a>
-    
-                        <a href="#" class="active">
-                            CATEGORÍAS
-                        </a>
-    
-                        <a href="reporte-ventas.html">
-                            REGISTRO DE VENTAS
-                        </a>
-    
-                        <a href="#" class="logout" id="btn-cerrar-sesion">
-                            CERRAR SESIÓN
-                        </a>
-                    </nav>
-    
-                    <div class="sidebar-footer">
-                        <div class="sidebar-user">
-                            <div class="sidebar-avatar">
-                                <img src="" alt="">
-                            </div>
-    
-                            <div>
-                                <div class="sidebar-user-name">
-                                    Administrador
-                                </div>
-    
-                                <div class="sidebar-user-role"></div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            `;
-        }
-    
+class BtnSecundario extends HTMLElement {
+    constructor(){
+        super();
+        this.classList.add("btn-submit")
     }
-    
-    customElements.define("barra-lateral", Sidebar);
+}
 
-
-    class headerAdmin extends HTMLElement {
-
-        connectedCallback() {
-            this.innerHTML = `
-            <section class="header">
-            <div>
-                <h2 class="header-title">Gestión de Categorías</h2>
+customElements.define(
+    "btn-secundario", BtnSecundario
+);
+customElements.get("btn-secundario")
+class Header extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <section class="header">
+                <div>
+                <h2 class="header-title">Administración</h2>
                 <div class="header-breadcrumb">
                     <span>Admin</span>
                     <span>/</span>
                     <span>Categorías</span>
                 </div>
             </div>
-            <button class="btn-primary" id="btn-nueva-categoria">
-                <span class="material-symbols-outlined">add</span>
-                Nueva Categoría
-            </button>
+               <a href="gestion-eventos.html">
+                 <btn-primario  id="btn-nueva-categoria">
+                    <span class="material-symbols-outlined"><img src="" alt=""></span>
+                    NEW EVENT
+                </btn-primario>
+               </a>
         </section>
-            `;
-        }
-    
+        `;
     }
-    
-    customElements.define("header-admin", headerAdmin);
+}
+
+customElements.define(
+    "header-admin", Header
+);
+
+class Sidebar extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+          <aside class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-logo material-symbols-outlined">
+                <h2 class="footer-logo">SeVenTonic</h2>
+            </span>
+            <p class="sidebar-label">ADMIN PANEL</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="Principaladmin.html">
+                <span class="material-symbols-outlined"></span>
+                PRINCIPAL
+            </a>
+            <a href="gestion-eventos.html">
+                <span class="material-symbols-outlined"></span>
+                GESTIÓN DE EVENTOS
+            </a>
+            <a href="Categorias.html">
+                <span class="material-symbols-outlined"></span>
+                CATEGORÍAS
+            </a>
+            <a href="Reporte-ventas.html">
+                <span class="material-symbols-outlined"></span>
+                REGISTRO DE VENTAS
+            </a>
+            <a href="../index.html" class="logout" id="btn-cerrar-sesion">
+                <span class="material-symbols-outlined"></span>
+                CERRAR SESIÓN
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <div class="sidebar-user-name">Administrador</div>
+                    <div class="sidebar-user-role"></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+        `;
+    }
+}
+
+customElements.define(
+    "barra-lateral-admin", Sidebar
+);
 
 
-    class footeradmin extends HTMLElement {
-
-        connectedCallback() {
-            this.innerHTML = `
-            <section class="admin-footer">
+class footer extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <footer class="admin-footer">
             <div class="footer-grid">
                 <div>
                     <h2 class="footer-logo">SeVenTonic</h2>
@@ -133,6 +140,7 @@ customElements.define(
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
            </section>
             `;
         }
@@ -140,3 +148,13 @@ customElements.define(
     }
     
     customElements.define("footer-admin", footeradmin);
+=======
+        </footer>
+        `;
+    }
+}
+
+customElements.define(
+    "footer-admin", footer
+);
+>>>>>>> 5493e649491944226bfd6b9d1dc081f977e3d1a0

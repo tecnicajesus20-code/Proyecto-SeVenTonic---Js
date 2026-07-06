@@ -1,4 +1,25 @@
 /* Header styles */
+#admin-principal .active {
+     color: var(--neon-cyan);
+     background: rgba(0, 220, 229, 0.05);
+     border-right: 2px solid var(--neon-cyan);
+ }
+#admin-categorias .active {
+    color: var(--neon-cyan);
+    background: rgba(0, 220, 229, 0.05);
+    border-right: 2px solid var(--neon-cyan);
+}
+#admin-eventos .active {
+     color: var(--neon-cyan);
+    background: rgba(0, 220, 229, 0.05);
+    border-right: 2px solid var(--neon-cyan);
+}
+#admin-ventas .active {
+     color: var(--neon-cyan);
+    background: rgba(0, 220, 229, 0.05);
+    border-right: 2px solid var(--neon-cyan);
+}
+
 #btn-nueva-categoria .material-symbols-outlined {
     font-size: 16px;
 }
@@ -16,10 +37,13 @@
            ============================================ */
 /* Admin Footer Styles */
 .admin-footer {
-    margin-top: auto;
+    margin-top: 5vh;
     background: var(--surface-container-lowest);
     padding: 48px 64px;
     border-top: 1px solid rgba(58, 73, 74, 0.2);
+    display: grid;
+     min-height: 100vh;
+     grid-template-rows: auto 1fr auto;
 }
 
 .footer-grid {
@@ -182,26 +206,7 @@
     text-decoration: underline;
 }
 
-.btn-submit {
-    width: 100%;
-    background: transparent;
-    border: 1px solid var(--primary-fixed-dim);
-    color: var(--primary-fixed-dim);
-    padding: 16px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 4px;
-}
 
-.btn-submit:hover {
-    background: var(--primary-fixed-dim);
-    color: black;
-}
 
 .btn-cancel {
     width: 100%;
@@ -243,4 +248,142 @@
     100% {
         opacity: 0.4;
     }
+}
+.container-vistas{
+    margin: 10vh ;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-align: center;
+    gap: 2rem;
+}
+
+
+  /* // ============================================
+
+============================================ --> */
+/* ============================================
+                TABLA
+============================================ */
+
+.tabla-contenedor{
+    background: var(--surface-container);
+    border: 1px solid var(--outline-variant);
+    border-radius: 10px;
+    box-shadow: 4px 4px 100px var(--outline-variant);
+    overflow: hidden;
+    margin: 5vh;
+}
+
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface-container-high);
+    border-bottom: 1px solid var(--outline-variant);
+    transition: .3s ease;
+}
+
+
+
+.tabla tr th{
+    background-color: var(--surface-container-highest);
+    padding: 18px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--primary-fixed-dim);
+}
+
+.tabla tr td{
+    padding: 18px;
+    font-size: 14px;
+    color: var(--on-surface);
+    border-bottom: 1px solid var(--outline-variant);
+}
+
+
+.tabla tr:hover{
+    background: var(--surface-container-high);
+}
+
+.tabla tr:last-child td{
+    border-bottom: none;
+}
+
+/* ============================================
+                ESTADOS
+============================================ */
+
+.estado{
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.estado-pagado{
+    background: rgba(0,220,229,.15);
+    color: var(--primary-fixed-dim);
+    border: 1px solid rgba(0,220,229,.3);
+}
+
+.estado-pendiente{
+    background: rgba(157,0,255,.15);
+    color: var(--neon-purple);
+    border: 1px solid rgba(157,0,255,.3);
+}
+
+.estado-cancelado{
+    background: rgba(147,0,10,.2);
+    color: var(--error);
+    border: 1px solid var(--error-container);
+}
+
+/* ============================================
+                BOTONES
+============================================ */
+
+.acciones{
+    display: flex;
+    gap: 8px;
+}
+
+.acciones button{
+    width: 36px;
+    height: 36px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--on-surface-variant);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.acciones button:hover{
+    color: var(--primary-fixed-dim);
+    border-color: var(--primary-fixed-dim);
+    background: rgba(0,220,229,.08);
+}
+
+.acciones .btn-eliminar:hover{
+    color: var(--error);
+    border-color: var(--error);
+    background: rgba(147,0,10,.15);
+}
+
+/* ============================================
+                RESPONSIVE
+============================================ */
+
+.tabla-contenedor{
+    overflow-x: auto;
+}
+
+.tabla{
+    min-width: 800px;
 }

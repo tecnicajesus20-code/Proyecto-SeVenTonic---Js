@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
+    <title>Reporte de Ventas</title>
+   <link rel="stylesheet" href="../css/Admin-categorias.css">
     <link rel="stylesheet" href="../css/Admin-pages.css">
-    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/Admin-categorias.css">
+    <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
 
-<body>
-<barra-lateral></barra-lateral>
-    <main class="main-content">
+<body id="admin-categorias">
+    <!-- ============================================
+SIDEBAR
+============================================ -->
+ <barra-lateral-admin></barra-lateral-admin>
 
+    <!-- ============================================
+MAIN CONTENT
+============================================ -->
+    <main class="main-content">
         <header>
             <header-admin></header-admin>
         </header>
@@ -73,20 +80,18 @@
                                 placeholder="Breve descripción de la categoría..."></textarea>
                         </div>
 
-                        <button class="btn-submit" type="submit" id="btn-guardar">
+                        <btn-secundario class="btn-submit" type="submit" id="btn-guardar">
                             GUARDAR CATEGORÍA
-                        </button>
-                        <button class="btn-cancel" type="button" id="btn-cancelar-edicion">
+                        </btn-secundario>
+                        <buttom class="btn-cancel" type="button" id="btn-cancelar-edicion">
                             CANCELAR EDICIÓN
                         </button>
                     </form>
                 </div>
             </aside>
         </div>
-
-        <!-- FOOTER -->
-        <footer >
-          <footer-admin></footer-admin>
+        <footer>
+            <footer-admin></footer-admin>
         </footer>
     </main>
 
@@ -107,10 +112,10 @@ MODAL DE CONFIRMACIÓN
 
     <script src="../js/modulos-admin/categorias.js"></script>
     <script src="../js/storage.js"></script>
-    <script src="js/admin.js"></script>
-    <script src="../js/components.js" defer></script>
-    <script src="js/data-seed.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/data-seed.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
