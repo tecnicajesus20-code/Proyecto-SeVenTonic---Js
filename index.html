@@ -15,32 +15,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;700&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-body text-base selection:bg-cyan-500/30 selection:text-white">
+<body>
         <header>
             <header-user></header-user>
         </header>
+         
 
-    <main class="main-layout page-gradient relative">
-        <div class="atmospheric-glow"></div>
-        
-        <section class="hero-section">
-            <div class="">
+    <main class="main-layout">
+       <section class="container">
+         <articule class="hero-section">
                 <h1 class="hero-title">
                     SUMÉRGETE EN EL <span class="gradient-text">RITMO</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Descubre los mejores conciertos, diseñados para ti. La energía del directo en la palma de tu mano.
+                    Descubre los mejores Event, diseñados para ti. La energía del directo en la palma de tu mano.
                 </p>
-                <div class="">
-                </div>
-            </div>
-        </section>
-
-        <section class="filters-section">
-            <div class="glass-card filters-wrapper neon-glow-cyan">
+        </articule>
+        <articule class="filters-section">
+            <div class="glass-card filters-wrapper">
                 <div class="">
                     <label class="filter-label">Cuándo</label>
                     <div class="filter-input-wrapper">
@@ -68,17 +61,36 @@
                     </button>
                 </div>
             </div>
+        </articule>
+        <section class="grid-section events-grid ">
+             <article class="">
+                <div class="event-card glass-card neon-glow-cyan">
+                    <div class="card-image-wrapper">
+                          <div class="card-image" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY9YYHuzI57QF2xhT-EtGIcpbugSz4fh8E75S1-He6iA&s=10"></img></div>
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-recommended">RECOMENDADO</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Artist Artist</h3>
+                        <p class="card-info">Próximo Evento: <span class="text-gray-300">Estadio</span></p>
+                        <div class="card-footer">
+                            <span class="card-tag"># ITTTECIA</span>
+                            <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
+       </section>
 
-        <section class="grid-section">
-            
-        </section>
-    </main>
-     <footer>
+        
+        <footer>
             <footer-admin></footer-admin>
         </footer>
-    
     </main>
+    
+    
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>
     <script src="js/data-seed.js"></script>

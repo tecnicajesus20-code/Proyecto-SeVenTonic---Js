@@ -47,7 +47,6 @@
      grid-template-rows: auto 1fr auto;
      position: fixed;
      bottom: 0;
-     z-index: 10000000;
 }
 
 .footer-grid {
@@ -375,12 +374,5 @@
 .acciones .btn-eliminar:hover {
     color: var(--color-error);
     border-color: var(--color-error);
-<<<<<<< HEAD
     background: rgba(147, 0, 10, .15);
 }
-=======
-    background: rgba(147,0,10,.15);
-}
-
-
->>>>>>> feacture/Usuario
