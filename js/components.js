@@ -88,7 +88,7 @@ class Sidebar extends HTMLElement {
             const activo = paginaActual === item.href ? " active" : "";
             return `<a href="${item.href}" class="${activo.trim()}">
                 <span class="material-symbols-outlined">${item.icono}</span>
-                ${item.texto}
+                <span>${item.texto}</span>
             </a>`;
         }).join("");
 
@@ -105,7 +105,7 @@ class Sidebar extends HTMLElement {
                 ${enlaces}
                 <a href="../index.html" class="logout" id="btn-cerrar-sesion">
                     <span class="material-symbols-outlined">logout</span>
-                    CERRAR SESIÓN
+                    <span>CERRAR SESIÓN</span>
                 </a>
             </nav>
             <div class="sidebar-footer">

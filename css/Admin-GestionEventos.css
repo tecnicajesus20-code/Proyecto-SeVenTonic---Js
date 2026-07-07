@@ -178,9 +178,11 @@
 
 /* ---- Imagen del evento ---- */
 .evento-imagen {
-    width: auto;
-    height: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .img{
@@ -475,4 +477,78 @@
     color: var(--cian-neon);
     box-shadow: 0 0 40px rgba(0, 220, 229, 0.5);
     transform: scale(1.01);
+}
+
+/* ============================================
+   RESPONSIVE - GESTIÓN DE EVENTOS
+   ============================================ */
+@media (max-width: 768px) {
+    #admin-eventos .main-content {
+        padding: 1rem;
+    }
+
+    #admin-eventos section h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Buscador y botón crear evento */
+    #admin-eventos section>article:nth-of-type(2) {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #admin-eventos section>article:nth-of-type(2)>div {
+        flex: 1 1 auto;
+    }
+
+    #btn-crear-evento {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem;
+    }
+
+    /* Tarjeta de evento responsive */
+    .evento-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .evento-imagen {
+        width: 100%;
+        height: 180px;
+    }
+
+    .evento-info {
+        padding: 0;
+        min-width: 0;
+    }
+
+    .evento-fecha-lugar {
+        border-left: none;
+        border-right: none;
+        border-top: 1px dashed var(--borde-contorno-variante);
+        border-bottom: 1px dashed var(--borde-contorno-variante);
+        padding: 1rem 0;
+        min-width: 0;
+    }
+
+    .evento-acciones {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem 0 0 0;
+        gap: 1rem;
+        min-width: 0;
+    }
+
+    .evento-acciones .btn-editar {
+        margin-left: auto;
+    }
 }
