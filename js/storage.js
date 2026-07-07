@@ -29,6 +29,17 @@ function guardarEventos(lista) {
 function obtenerEventos() {
     return ObtenerDatos('eventos');
 }
+function obtenerInfoEvento(idEvento) {
+    const eventos = obtenerEventos();
+
+    for (let i = 0; i < eventos.length; i++) {
+        if (eventos[i].id === idEvento) {
+            return eventos[i];
+        }
+    }
+
+    return null;
+}
 
 function guardarCarrito(lista) {
     guardarDatos('carrito', lista);
@@ -57,6 +68,9 @@ function cerrarSesion() {
 
 function estaLogueado() {
     return localStorage.getItem('sesionAdmin') === 'activa';
+}
+function obtenerUsers() {
+    return ObtenerDatos('user');
 }
 
 function contarTodo() {

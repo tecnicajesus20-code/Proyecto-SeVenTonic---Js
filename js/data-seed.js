@@ -129,6 +129,13 @@ const ventasIniciales = [
         total: 170000
     }
 ];
+const usuario =[
+    {
+        id: "001",
+        user: "admin@gmail.com",
+        password : "Administrador12345"
+    }
+]
 
 // Inicializar datos si no existen
 function inicializarDatos() {
@@ -141,10 +148,12 @@ function inicializarDatos() {
     if (!localStorage.getItem('ventas')) {
         localStorage.setItem('ventas', JSON.stringify(ventasIniciales));
     }
+    if (!localStorage.getItem('user')) {
+        localStorage.setItem('user', JSON.stringify(usuario));
+    }
     if (!localStorage.getItem('carrito')) {
         localStorage.setItem('carrito', JSON.stringify([]));
     }
-    localStorage.removeItem('sesionAdmin');
 }
 
 // Ejecutar al cargar

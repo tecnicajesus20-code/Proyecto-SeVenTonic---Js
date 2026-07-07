@@ -6,9 +6,11 @@
     <title>SevenTonic</title>
    <link rel="stylesheet" href="css/Admin-categorias.css">
     <link rel="stylesheet" href="css/Admin-pages.css">
+    <link rel="stylesheet" href="css/">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/WebComponents.css">
     <link rel="stylesheet" href="css/Admin-RegistroVentas.css">
+    <link rel="stylesheet" href="css/Admin-GestionEventos.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/home-Usuario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,39 +64,91 @@
                 </div>
             </div>
         </articule>
-        <section class="grid-section events-grid ">
-             <article class="">
-                <div class="event-card glass-card neon-glow-cyan">
-                    <div class="card-image-wrapper">
-                          <div class="card-image" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY9YYHuzI57QF2xhT-EtGIcpbugSz4fh8E75S1-He6iA&s=10"></img></div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-recommended">RECOMENDADO</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Artist Artist</h3>
-                        <p class="card-info">Próximo Evento: <span class="text-gray-300">Estadio</span></p>
-                        <div class="card-footer">
-                            <span class="card-tag"># ITTTECIA</span>
-                            <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
+        
        </section>
 
-        
-        <footer>
-            <footer-admin></footer-admin>
-        </footer>
+        <cards-eventos class="events-container" ></cards-eventos>
+    
     </main>
+    <!-- /////////////////////////////////
+        MODAL INICIO SECCION
+    ////////////////////////////-->
+    <div id="modal-inicioseccion" class="overlay none"  >
+        <div class="modal-contenido">
+            <span class="modal-cerrar" id="user-cerrar">&times;</span>
+            <h2 id="modal-titulo">Iniciar Seccion</h2>
+            <form id="form-evento">
+                <label for="Email">Usuario</label>
+                <input type="email" id="Email" placeholder="correo@gmail.com" required>
+
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="Contraseña" required>
+                <a href="Administracion/Principaladmin.html">
+                <button stype="submit" class="btn-primary" id="btn-guardar-evento">
+                    Iniciar Seccion
+                </button>
+                </a>
+            </form>
+        </div>
+    </div>
+
+   
+
+     <!-- /////////////////////////////////
+        MODAL MAS INFORMACION
+    ////////////////////////////-->
+
+    <div id="modal-info" class="overlay none">
+        <div class="modal-contenido">
+            <span class="modal-cerrar" id="cerrar-modal">&times;</span>
     
+            <article class="event-card glass-card neon-glow-cyan">
     
+                <img id="modal-imagen" class="card-image-wrapper evento-imagen" src="" alt="Imagen del evento">
+    
+                <div class="card-body">
+    
+                    <h2 id="modal-nombre" class="card-title"></h2>
+    
+                    <p class="card-info">
+                        <strong>Ciudad:</strong>
+                        <span id="modal-ciudad"></span>
+                    </p>
+    
+                    <p class="card-info">
+                        <strong>Fecha:</strong>
+                        <span id="modal-fecha"></span>
+    
+                        <span> || Hora: </span>
+    
+                        <span id="modal-hora"></span>
+                    </p>
+    
+                    <p class="card-info">
+                        <strong>Descripción:</strong>
+                    </p>
+    
+                    <p id="modal-descripcion" class="card-info"></p>
+    
+                    <div class="card-footer">
+                        <span id="modal-precio" class="card-tag"></span>
+    
+                        <button class="btn-primary" id="btn-comprar">
+                            Comprar Tickets
+                        </button>
+                    </div>
+    
+                </div>
+    
+            </article>
+        </div>
+    </div>
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>
     <script src="js/data-seed.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+    
 </body>
 </html>
 

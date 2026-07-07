@@ -27,10 +27,9 @@
 .btn-submit {
     display: flex; 
     align-items: center; 
-    width: min-content;
     background: transparent;
-    border: 1px solid var(--primario-fijo-tenue);
-    color: var(--primario-fijo-tenue);
+    border: 1px solid var(--cian-neon);
+    color: var(--cian-neon);
     padding: 16px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;

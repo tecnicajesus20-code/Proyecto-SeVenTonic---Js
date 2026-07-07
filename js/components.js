@@ -215,7 +215,7 @@ class HeaderUsuario extends HTMLElement {
                                 <button class="metric-icon">
                                 <span class="material-symbols-outlined">shopping_cart</span>
                                 </button>
-                                <btn-primario id="Sign" class ="btn">Ingresar como Admistrador</btn-primario>
+                                <btn-secundario id="Sign" class ="btn">Ingresar como Admistrador</btn-secundario>
                         </div>
                     </div>
                 </nav>
@@ -230,26 +230,33 @@ customElements.define("header-user", HeaderUsuario);
 class CardEvent extends HTMLElement{
     connectedCallback(){
     const eventos = obtenerEventos()
-
-     this.innerHTML = `
-            <article class="events-grid">
+    console.log(eventos)
+    let cards = ""
+    for (let i = 0; i < eventos.length; i++) {
+      cards += `
+            <article >
                 <div class="event-card glass-card neon-glow-cyan">
-                    <div class="card-image-wrapper">
-                        <div class="card-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3Ut0DGITbw_8crO0eQqjk-n26zmLqrk_3_bFrH_O6NUgW7ahPoe1MJgi5Eo-xAbB6M9AOv9lxjizklmsyu1Ow2WIQEYmluXSGhTqkCI8ad_rB59x0sVV6_jKp-ti4A_p2EP7iEsIwEkPr5wZ4GJhdQDZGllvrGQn-hXDaZuT4LvrzPiJtUbbJOLbRxWqHkNKNgCtzMEEaD4LEG3s86XZr0T3C2E8eOde-6DnbiIfdkxt4aeq8j0KH')"></div>
+                        <img class=" card-image-wrapper img" src="${eventos[i].imagen}">
                         <div class="absolute top-3 right-3">
-                            <span class="badge-recommended">RECOMENDADO</span>
+                            <span class="badge-recommended">${eventos[i].ciudad}</span>
                         </div>
-                    </div>
                     <div class="card-body">
-                        <h3 class="card-title">Artist Artist</h3>
-                        <p class="card-info">Próximo Evento: <span class="text-gray-300">Estadio</span></p>
+                        <h3 class="card-title">${eventos[i].nombre}</h3>
+                        <p class="card-info">Fecha: ${eventos[i].fecha} <span> || Hora: ${eventos[i].hora}</span></p>
                         <div class="card-footer">
-                            <span class="card-tag"># ITTTECIA</span>
-                            <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
+                            <span class="card-tag">${eventos[i].precio}</span>
+                            <buttom id="more-information" class="material-symbols-outlined arrow-icon">arrow_forward</buttom>
                         </div>
                     </div>
                 </div>
             </article>
         `;
     }
+    this.innerHTML = cards
+    }
 }
+
+customElements.define("cards-eventos" , CardEvent)
+
+
+
