@@ -496,3 +496,302 @@ body {
     color: #00dce5;
     transform: translateX(4px);
 }
+/* ==================================================
+   RESPONSIVE DESIGN - SevenTonic
+================================================== */
+
+
+/* ===============================
+   TABLETS
+================================ */
+
+@media (max-width: 1024px){
+
+    /* HEADER */
+    .navbar-container{
+        margin: 0;
+        padding: 16px 30px;
+    }
+
+
+    .footer-logo{
+        font-size: 24px;
+    }
+
+
+    /* HERO */
+
+    .hero-section{
+        padding: 4rem 30px 2rem;
+        margin: 0;
+    }
+
+
+    .hero-title{
+        font-size: 48px;
+    }
+
+
+    /* EVENTOS */
+
+    .events-container{
+        grid-template-columns: repeat(3,1fr);
+        margin: 3vh;
+    }
+
+
+    .card-image{
+        height: 170px;
+    }
+
+
+}
+
+
+
+/* ===============================
+   TABLET PEQUEÑA / CELULAR GRANDE
+================================ */
+
+@media(max-width:768px){
+
+
+    /* HEADER */
+
+    .navbar-container{
+
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 15px 20px;
+
+    }
+
+
+    .navbar-container > div{
+
+        width:100%;
+        justify-content:center;
+
+    }
+
+
+    .person{
+
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+
+    .nav{
+
+        font-size:13px;
+    }
+
+
+    .btn{
+
+        width:100%;
+    }
+
+
+
+    /* HERO */
+
+
+    .main-layout{
+        padding-top:10rem;
+    }
+
+
+    .hero-section{
+
+        padding:3rem 20px 2rem;
+
+    }
+
+
+    .hero-title{
+
+        font-size:36px;
+        line-height:1.2;
+
+    }
+
+
+    .hero-subtitle{
+
+        font-size:1rem;
+
+    }
+
+
+
+    /* GRID EVENTOS */
+
+    .events-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        margin:20px;
+
+        gap:15px;
+
+    }
+
+
+
+    .card-body{
+
+        padding:1rem;
+
+    }
+
+
+    .card-title{
+
+        font-size:1rem;
+
+    }
+
+
+
+    .card-footer{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:10px;
+
+    }
+
+
+
+    .quantity-input{
+
+        width:100%;
+
+    }
+
+
+}
+
+
+
+/* ===============================
+   MOVILES
+================================ */
+
+
+@media(max-width:480px){
+
+
+    /* HEADER */
+
+    .navbar-container{
+
+        padding:12px;
+
+    }
+
+
+    .footer-logo{
+
+        font-size:22px;
+
+    }
+
+
+    .navbar-container .btn{
+
+        font-size:13px;
+
+    }
+
+
+
+    /* HERO */
+
+    .hero-title{
+
+        font-size:28px;
+
+    }
+
+
+    .hero-subtitle{
+
+        font-size:.9rem;
+
+    }
+
+
+
+    /* CARDS */
+
+    .events-container{
+
+        grid-template-columns:1fr;
+
+        margin:15px;
+
+    }
+
+
+
+    .card-image{
+
+        height:220px;
+
+    }
+
+
+
+    /* MODALES */
+
+
+    .modal-contenido{
+
+        width:92%;
+
+        padding:1.2rem;
+
+        border-radius:15px;
+
+    }
+
+
+    .modal-evento-info{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .modal-evento-info img{
+
+        width:100%;
+
+    }
+
+
+    .card-footer{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .btn-primary,
+    .btn-submit{
+
+        width:100%;
+
+    }
+
+
+}
