@@ -29,8 +29,8 @@ Proyecto_Conciertos_SalcedoKleiderson/
 └── assets/
     └── img/
 
-        
 
+    
     # GUÍA DE REFERENCIA JAVASCRIPT Y ESTÁNDARES PARA EL PROYECTO
 > [!IMPORTANT]
 > **INSTRUCCIÓN PARA LA IA:** Este documento describe detalladamente los conceptos, métodos, APIs y patrones de diseño de JavaScript que se han aprendido y aplicado en clase. Al desarrollar o modificar código para este proyecto, debes ceñirte estrictamente a estas tecnologías y patrones de implementación para mantener la coherencia con el aprendizaje del estudiante.

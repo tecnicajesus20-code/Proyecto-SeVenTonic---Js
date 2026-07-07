@@ -208,12 +208,8 @@ class HeaderUsuario extends HTMLElement {
                                 </span>
                             </div>
                         <div style="display: flex; gap: 4vh;">
-                            <div class="search-bar-container">
-                                <span class="material-symbols-outlined ">search</span>
-                                <input class="search-input" placeholder="Buscar eventos..." type="text">
-                            </div>
-                                <button class="metric-icon">
-                                <span class="material-symbols-outlined">shopping_cart</span>
+                           
+                                
                                 </button>
                                 <btn-secundario id="Sign" class ="btn">Ingresar como Admistrador</btn-secundario>
                         </div>
@@ -245,7 +241,11 @@ class CardEvent extends HTMLElement{
                         <p class="card-info">Fecha: ${eventos[i].fecha} <span> || Hora: ${eventos[i].hora}</span></p>
                         <div class="card-footer">
                             <span class="card-tag">${eventos[i].precio}</span>
-                            <buttom id="more-information" class="material-symbols-outlined arrow-icon">arrow_forward</buttom>
+                             <button
+                                id="more-information"
+                                class="material-symbols-outlined arrow-icon"
+                                data-id="${eventos[i].id}">arrow_forward
+                            </button>
                         </div>
                     </div>
                 </div>

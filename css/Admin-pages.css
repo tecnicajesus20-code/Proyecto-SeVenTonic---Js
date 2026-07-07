@@ -2,6 +2,29 @@
 #btn-nuevo-evento .material-symbols-outlined {
     font-size: 16px;
 }
+.hero-section {
+    position: relative;
+    padding: 5rem 64px 3rem 64px;
+    max-width: 1280px;
+    margin: 3vh;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #dce4e4;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: #b9caca;
+    max-width: 36rem;
+    margin: 0 auto;
+}
 
 .sidebar-nav .material-symbols-outlined {
     font-size: 20px;

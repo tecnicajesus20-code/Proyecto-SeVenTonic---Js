@@ -44,6 +44,83 @@ MODALES EVENTOS
 .none{
     display: none;
 }
+.activo {
+    display: flex;
+    flex-direction: column;
+}   
+/* /////////////////////////////////
+MODAL MAS INFORMACION 
+/////////////////////////////*/
+.quantity-input{
+    width: 80px;
+    height: 45px;
+    background: rgba(255,255,255,.08);
+    border: 2px solid rgba(0,255,255,.3);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    transition: .3s ease;
+}
+
+.quantity-input:focus{
+    border-color: #00ffff;
+    box-shadow: 0 0 12px rgba(0,255,255,.4);
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button{
+    opacity: 1;
+    cursor: pointer;
+    height: 40px;
+}
+/* /////////////////////////////////
+MODAL FACTURACION
+/////////////////////////////*/
+.modal-contenido{
+    max-width:900px;
+    width:90%;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+.modal-evento-info{
+    display:flex;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.modal-evento-info img{
+    width:320px;
+    border-radius:12px;
+}
+
+.modal-formulario{
+    margin-top:2rem;
+}
+
+.modal-formulario form{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.modal-formulario input{
+    width:100%;
+}
+
+.cantidad{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+hr{
+    margin:2rem 0;
+}
+
 /* ==========================================================================
    Configuración General de Estilos de Base
    ========================================================================== */

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/Admin-pages.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/Admin-RegistroVentas.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body id="admin-principal">
@@ -17,6 +18,16 @@
             <header-admin ></header-admin>
         </header>  
         <section>
+            <article style="text-align: center" >
+                <articule class="hero-section">
+                <h1 class="hero-title">
+                    GESTIONA TUS <span class="gradient-text">EVENTOS</span>
+                </h1>
+                <p class="hero-subtitle">
+                     Administra eventos, controla ventas y lleva la experiencia de tus asistentes al siguiente nivel.
+                </p>
+                </articule>
+            </article>
             <article class="container-vistas">
                 <div class="form-card ">
                     <span>
@@ -58,36 +69,6 @@
                 </div>
                 
             </article>
-           <article>
-
-    <div class="category-grid-header">
-        <h3 class="category-grid-title">Ventas Recientes</h3>
-
-        <a href="Reporte-ventas.html">
-            <btn-secundario>Ver Todo</btn-secundario>
-        </a>
-    </div>
-
-    <div class="tabla-contenedor">
-
-        <table class="tabla">
-
-                <tr>
-                    <th>Fecha</th>
-                    <th>Cliente</th>
-                    <th>Evento</th>
-                    <th>Total</th>
-                </tr>
-                   
-                <tr>
-                   <td>Cargando...</td>
-                </tr>
-
-        </table>
-
-    </div>
-
-</article>
         </section>
         <footer>
             <footer-admin></footer-admin>
@@ -96,7 +77,7 @@
 
 
 
-    <script src="../js/modulos-admin/categorias.js"></script>
+     <script src="../js/modulos-admin/reporte-ventas.js"></script>
     <script src="../js/storage.js"></script>
     <script src="../js/admin.js"></script>
     <script src="../js/components.js"></script>

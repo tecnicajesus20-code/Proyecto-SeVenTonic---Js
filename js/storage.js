@@ -29,18 +29,18 @@ function guardarEventos(lista) {
 function obtenerEventos() {
     return ObtenerDatos('eventos');
 }
-function obtenerInfoEvento(idEvento) {
+function obtenerinfoenEvento(idEvento) {
     const eventos = obtenerEventos();
-
+    console.log("id recibido:", idEvento, typeof idEvento);
     for (let i = 0; i < eventos.length; i++) {
+        console.log("id del evento:", eventos[i].id, typeof eventos[i].id);
         if (eventos[i].id === idEvento) {
             return eventos[i];
         }
     }
-
+    
     return null;
 }
-
 function guardarCarrito(lista) {
     guardarDatos('carrito', lista);
 }

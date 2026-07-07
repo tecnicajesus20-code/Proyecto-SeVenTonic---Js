@@ -129,6 +129,8 @@ const ventasIniciales = [
         total: 170000
     }
 ];
+
+
 const usuario =[
     {
         id: "001",

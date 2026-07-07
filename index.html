@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SevenTonic</title>
    <link rel="stylesheet" href="css/Admin-categorias.css">
-    <link rel="stylesheet" href="css/Admin-pages.css">
-    <link rel="stylesheet" href="css/">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/WebComponents.css">
     <link rel="stylesheet" href="css/Admin-RegistroVentas.css">
@@ -33,36 +31,6 @@
                 <p class="hero-subtitle">
                     Descubre los mejores Event, diseñados para ti. La energía del directo en la palma de tu mano.
                 </p>
-        </articule>
-        <articule class="filters-section">
-            <div class="glass-card filters-wrapper">
-                <div class="">
-                    <label class="filter-label">Cuándo</label>
-                    <div class="filter-input-wrapper">
-                        <span class="material-symbols-outlined ">calendar_today</span>
-                        <select class="filter-select">
-                            <option>Este fin de semana</option>
-                            <option>Próxima semana</option>
-                            <option>Este mes</option>
-                            <option>Seleccionar rango...</option>
-                        </select>
-                        <span class="material-symbols-outlined ">expand_more</span>
-                    </div>
-                </div>
-                <div class="">
-                    <label class="filter-label">Dónde</label>
-                    <div class="filter-input-wrapper">
-                        <span class="material-symbols-outlined ">location_on</span>
-                        <input class="filter-input" placeholder="Ciudad o recinto..." type="text">
-                    </div>
-                </div>
-                <div class="">
-                    <button class="btn-filter">
-                        <span class="material-symbols-outlined">tune</span>
-                        FILTRAR
-                    </button>
-                </div>
-            </div>
         </articule>
         
        </section>
@@ -98,16 +66,13 @@
         MODAL MAS INFORMACION
     ////////////////////////////-->
 
-    <div id="modal-info" class="overlay none">
-        <div class="modal-contenido">
-            <span class="modal-cerrar" id="cerrar-modal">&times;</span>
-    
-            <article class="event-card glass-card neon-glow-cyan">
-    
+    <section id="modal-info" class="overlay none">
+        <article class="modal-contenido neon-glow-cyan">
+            <div>
+                <span class="modal-cerrar" id="cerrar-modal">&times;</span>
                 <img id="modal-imagen" class="card-image-wrapper evento-imagen" src="" alt="Imagen del evento">
-    
+            </div>
                 <div class="card-body">
-    
                     <h2 id="modal-nombre" class="card-title"></h2>
     
                     <p class="card-info">
@@ -127,26 +92,68 @@
                     <p class="card-info">
                         <strong>Descripción:</strong>
                     </p>
-    
                     <p id="modal-descripcion" class="card-info"></p>
-    
+                    
                     <div class="card-footer">
                         <span id="modal-precio" class="card-tag"></span>
-    
+                        <input id="input" type="number" class="quantity-input" min="1" value="1">
                         <button class="btn-primary" id="btn-comprar">
                             Comprar Tickets
                         </button>
                     </div>
     
                 </div>
-    
-            </article>
-        </div>
-    </div>
+        </article>
+         <!-- FORMULARIO --> >
+        <article id="modal-formulario" class="modal-formulario modal-contenido neon-glow-cyan none">
+
+            <hr>
+
+            <h2>Datos del comprador</h2>
+
+            <form id="form-compra">
+
+                <div class="form-group">
+                    <label for="identificacion">Identificación *</label>
+                    <input id="identificacion" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input id="nombre" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input id="direccion" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input id="telefono" type="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input id="email" type="email" required>
+                </div>
+
+                <button
+                    class="btn-submit"
+                    type="submit"
+                    id="btnfinal">
+                    FINALIZAR COMPRA
+
+                </button>
+
+            </form>
+
+        </article>
+    </section>
+
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>
     <script src="js/data-seed.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/admin.js"></script>
     
 </body>
