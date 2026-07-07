@@ -94,17 +94,9 @@ function Precio() {
     return totalPrecio;
 }
 function mostrarFormularioCompra() {
-
-    // Mostrar el formulario
     formulario.classList.remove("none");
-
-    // Cambiar el tamaño del modal
     contenido.classList.add("modal-compra");
-
-    // Cambiar la distribución de la información
     informacion.classList.add("info-compra");
-
-    // Ocultar el botón Comprar
     btnfacturacion.style.display = "none";
 }
 

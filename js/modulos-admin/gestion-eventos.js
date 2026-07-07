@@ -1,23 +1,6 @@
-/**
- * ============================================================
- * ARCHIVO: gestion-eventos.js (VERSIÓN OPTIMIZADA)
- * PROPÓSITO: Controlar la página de "Gestión de Eventos"
- * ============================================================
- * 
- * Funcionalidades:
- * - Muestra total de eventos, categorías y ventas.
- * - Lista eventos con imagen, categoría, fecha, hora, ciudad.
- * - Busca por nombre, artista o fecha.
- * - CRUD completo: Crear, Leer, Editar, Eliminar (con modal).
- * - Todos los datos en localStorage mediante storage.js.
- * ============================================================
- */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ============================================================
-    // 1. REFERENCIAS A ELEMENTOS DEL DOM
-    // ============================================================
     const $ = id => document.getElementById(id);
     const totalEventos = $('total-eventos');
     const totalCategorias = $('total-categorias');
@@ -41,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagenInput = $('imagen');
     const btnCerrarModal = $('btn-cerrar-modal');
 
-    // Asegurar que el modal empiece oculto
     modalOverlay.style.display = 'none';
 
     // ============================================================
@@ -214,12 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let eventos = obtenerEventosStorage();
 
         if (id) {
-            // Edición
+         
             const index = eventos.findIndex(e => e.id == id);
             if (index === -1) return alert('Error: el evento no existe.');
             eventos[index] = { ...eventos[index], nombre, categoriaId, precio, fecha, hora, ciudad, descripcion, imagen };
         } else {
-            // Creación
+        
             const nuevoId = eventos.length ? Math.max(...eventos.map(e => e.id)) + 1 : 1;
             eventos.push({
                 id: nuevoId,
@@ -263,8 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCerrarModal.addEventListener('click', cerrarModal);
     modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) cerrarModal(); });
     formEvento.addEventListener('submit', guardarEventoFormulario);
-
-    // Delegación para botones de editar/eliminar
     eventosList.addEventListener('click', (e) => {
         const boton = e.target.closest('button');
         if (!boton) return;
@@ -279,9 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ============================================================
-    // 12. INICIALIZAR
-    // ============================================================
     console.log('Cargando gestión de eventos...');
     actualizarEstadisticas();
     mostrarEventos();

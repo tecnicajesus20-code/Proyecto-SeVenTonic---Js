@@ -48,7 +48,6 @@
     gap: 8px;
 }
 
-/* Category Grid Loading Indicator */
 .category-grid-loading {
     grid-column: 1 / -1;
     text-align: center;
@@ -253,9 +252,6 @@
 
 }
 
-
-
-/* Celulares grandes */
 @media (max-width: 768px) {
 
 
@@ -330,9 +326,6 @@
 }
 
 
-
-
-/* Celulares pequeños */
 @media (max-width: 480px) {
 
 

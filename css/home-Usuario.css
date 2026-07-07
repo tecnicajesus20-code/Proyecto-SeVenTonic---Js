@@ -177,7 +177,6 @@ body {
     background-image: linear-gradient(to right, #00dce5, #252727);
 }
 
-/* Animación del Ticker de Noticias */
 .marquee-text {
     white-space: nowrap;
     overflow: hidden;
@@ -239,12 +238,10 @@ body {
     color: #b9caca;
 }
 
-/* Contenedor Base */
 .main-layout {
     padding-top: 6rem;
 }
 
-/* Sección Hero */
 .hero-section {
     position: relative;
     padding: 5rem 64px 3rem 64px;
@@ -361,13 +358,10 @@ body {
    Grilla y Tarjetas de Contenido (Event Cards)
    ========================================================================== */
 .grid-section {
-    padding: 3rem 64px 4rem 64px; /* Un padding-top de 3rem separa las tarjetas de los filtros */
-    max-width: 1280px;
+    padding: 3rem 64px 4rem 64px; 
     margin: 0 auto;
 
 }
-
-/* Contenedor en cuadrícula (Grid) */
 .events-container {
     display: grid;
     grid-template-columns:  1fr 1fr 1fr 1fr  1fr ;
@@ -375,7 +369,7 @@ body {
     gap: 1.3vh;
 }
 
-/* Ajustes responsivos para la grilla (puedes meter más tarjetas luego) */
+
 @media (min-width: 768px) {
     .events-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -384,7 +378,6 @@ body {
     .events-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* Estructura de la Tarjeta */
 .event-card {
     border-radius: 0.75rem;
     overflow: hidden;
@@ -396,7 +389,6 @@ body {
     transform: translateY(-8px);
 }
 
-/* Brillo Neón Cian Personalizado */
 .neon-glow-cyan {
     box-shadow: 0 0 15px rgba(0, 220, 229, 0.25);
     border: 1px solid rgba(0, 220, 229, 0.2);
@@ -407,7 +399,6 @@ body {
     border-color: rgba(0, 220, 229, 0.6);
 }
 
-/* Contenedor de la Imagen */
 .card-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -426,7 +417,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Posicionamiento del Badge "Recomendado" */
 .absolute {
     position: absolute;
 }
@@ -445,7 +435,6 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Cuerpo de la Tarjeta */
 .card-body {
     padding: 1.25rem;
     display: flex;
@@ -470,7 +459,7 @@ body {
     color: #d1d5db;
 }
 
-/* Footer de la tarjeta */
+
 .card-footer {
     display: flex;
     justify-content: space-between;
@@ -507,7 +496,7 @@ body {
 
 @media (max-width: 1024px){
 
-    /* HEADER */
+
     .navbar-container{
         margin: 0;
         padding: 16px 30px;
@@ -519,7 +508,7 @@ body {
     }
 
 
-    /* HERO */
+   
 
     .hero-section{
         padding: 4rem 30px 2rem;
@@ -532,7 +521,6 @@ body {
     }
 
 
-    /* EVENTOS */
 
     .events-container{
         grid-template-columns: repeat(3,1fr);
@@ -556,7 +544,7 @@ body {
 @media(max-width:768px){
 
 
-    /* HEADER */
+
 
     .navbar-container{
 
@@ -597,7 +585,7 @@ body {
 
 
 
-    /* HERO */
+
 
 
     .main-layout{
@@ -627,8 +615,6 @@ body {
     }
 
 
-
-    /* GRID EVENTOS */
 
     .events-container{
 
@@ -688,7 +674,6 @@ body {
 @media(max-width:480px){
 
 
-    /* HEADER */
 
     .navbar-container{
 
@@ -712,7 +697,6 @@ body {
 
 
 
-    /* HERO */
 
     .hero-title{
 
@@ -729,7 +713,7 @@ body {
 
 
 
-    /* CARDS */
+
 
     .events-container{
 
@@ -749,7 +733,7 @@ body {
 
 
 
-    /* MODALES */
+
 
 
     .modal-contenido{

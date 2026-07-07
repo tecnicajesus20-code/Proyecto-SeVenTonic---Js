@@ -1,22 +1,6 @@
-/**
- * ============================================================
- * ARCHIVO: categorias.js (VERSIÓN OPTIMIZADA)
- * PROPÓSITO: Controlar la página de "Gestión de Categorías"
- * ============================================================
- * 
- * Funcionalidades:
- * - Muestra todas las categorías en grid con búsqueda.
- * - CRUD completo: Crear, Leer, Editar, Eliminar (con modal).
- * - Muestra cuántos eventos tiene cada categoría.
- * - Todos los datos en localStorage mediante storage.js.
- * ============================================================
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    // ============================================================
-    // 1. REFERENCIAS A ELEMENTOS DEL DOM
-    // ============================================================
     const $ = id => document.getElementById(id);
     const contenedor = $('contenedor-categorias');
     const buscador = $('buscador-categorias');
@@ -158,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let categorias = obtenerCategoriasStorage();
 
-        // Verificar duplicados (excluyendo la misma categoría si es edición)
+
         const duplicado = categorias.some(c =>
             c.id != id && c.nombre.toLowerCase() === nombre.toLowerCase()
         );
@@ -169,13 +153,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (id) {
-            // Edición
+      
             const index = categorias.findIndex(c => c.id == id);
             if (index === -1) return mostrarToast('Error al actualizar.', 'error');
             categorias[index] = { ...categorias[index], nombre, icono, descripcion };
             mostrarToast('✅ Categoría actualizada.', 'success');
         } else {
-            // Creación
+          
             const nuevoId = categorias.length ? Math.max(...categorias.map(c => c.id)) + 1 : 1;
             categorias.push({ id: nuevoId, nombre, icono, descripcion });
             mostrarToast('✅ Categoría creada.', 'success');

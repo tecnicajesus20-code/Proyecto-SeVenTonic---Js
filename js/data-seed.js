@@ -1,5 +1,4 @@
-// js/data-seed.js
-// ============================================
+
 // DATOS INICIALES
 // ============================================
 
@@ -22,7 +21,7 @@ const eventosIniciales = [
         fecha: "2026-07-20",
         hora: "19:00",
         ciudad: "Bogotá",
-        imagen: "https://picsum.photos/seed/rockparque/120/120", // 👈 placeholder online
+        imagen: "https://picsum.photos/seed/rockparque/120/120", 
         descripcion: "El festival de rock más grande de Colombia"
     },
     {
@@ -158,7 +157,6 @@ function inicializarDatos() {
     }
 }
 
-// Ejecutar al cargar
 inicializarDatos();
 
 console.log("📦 data-seed.js cargado con imágenes placeholder");

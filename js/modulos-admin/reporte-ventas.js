@@ -1,22 +1,6 @@
-/**
- * ============================================================
- * ARCHIVO: reporte-ventas.js (VERSIÓN OPTIMIZADA)
- * PROPÓSITO: Controlar la página de "Reporte de Ventas"
- * ============================================================
- * 
- * ¿Qué hace?
- * 1. Muestra métricas: total ventas, ingresos, tickets y ticket promedio.
- * 2. Lista ventas en tabla con paginación (10 por página).
- * 3. Filtra por búsqueda (cliente/evento) y por ciudad.
- * 4. Actualiza todo dinámicamente al filtrar.
- * ============================================================
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    // ============================================================
-    // 1. REFERENCIAS A ELEMENTOS DEL DOM
-    // ============================================================
     const $ = (id) => document.getElementById(id);
     const totalVentasEl = $('total-ventas');
     const totalIngresosEl = $('total-ingresos');
@@ -180,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (paginaActual < totalPaginas) { paginaActual++; renderizarTabla(); }
     });
 
-    // Detalle de venta (delegación)
     tablaBody.addEventListener('click', (e) => {
         const boton = e.target.closest('.btn-ver-detalle');
         if (!boton) return;

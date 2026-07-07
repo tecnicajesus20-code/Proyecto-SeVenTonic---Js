@@ -143,8 +143,6 @@
      display: flex;
      flex-direction: column;
  }
-
- /* HEADER */
  .header {
      display: flex;
      justify-content: space-between;
@@ -178,9 +176,6 @@
  .header-breadcrumb span:last-child {
      color: var(--primario-fijo-tenue);
  }
-
-
- /* PAGE CONTENT */
  .page-content {
      padding: 24px 64px;
      display: grid;

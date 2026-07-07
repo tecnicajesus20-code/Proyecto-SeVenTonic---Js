@@ -1,11 +1,8 @@
-// js/storage.js
 
-// 1. Guardar cualquier cosa
 function guardarDatos(nombre, datos) {
     localStorage.setItem(nombre, JSON.stringify(datos));
 }
 
-// 2. Traer cualquier cosa
 function ObtenerDatos(nombre) {
     const datos = localStorage.getItem(nombre);
     if (datos) {
@@ -109,4 +106,4 @@ function obtenerCiudades() {
     return [...new Set(ciudades)].sort();
 }
 
-console.log(" storage.js listo");
+console.log(" storage.js listo");// 👈 placeholder online

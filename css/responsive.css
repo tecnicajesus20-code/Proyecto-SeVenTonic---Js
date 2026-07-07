@@ -1,14 +1,12 @@
 /* ============================================
    RESPONSIVE - PÁGINA DE CATEGORÍAS
    ============================================ */
-
-/* --- Tablets (≤ 1024px) --- */
 @media (max-width: 1024px) {
     body {
         flex-direction: column;
     }
 
-    /* Sidebar reducido */
+  
     .sidebar {
         width: 72px;
         min-height: auto;
@@ -47,7 +45,7 @@
 
     .sidebar-nav a:not(.logout) span:last-child {
         display: none;
-        /* oculta texto, solo íconos */
+      
     }
 
     .sidebar-nav .logout {
@@ -92,10 +90,9 @@
     }
 }
 
-/* --- Móviles (≤ 768px) --- */
 @media (max-width: 768px) {
 
-    /* Sidebar: barra superior + menú desplegable (hamburguesa) */
+  
     .sidebar {
         width: 100%;
         height: auto;
@@ -128,7 +125,6 @@
         display: none;
     }
 
-    /* El nav se oculta por defecto y se muestra con .menu-open */
     .sidebar-nav {
         display: none;
         width: 100%;
@@ -201,7 +197,7 @@
 
     .category-grid {
         grid-template-columns: 1fr;
-        /* una columna en móvil */
+   
         gap: 12px;
     }
 
@@ -212,7 +208,7 @@
 
     .category-actions {
         opacity: 1;
-        /* siempre visible */
+
     }
 
     .category-card-bottom h4 {
@@ -264,7 +260,6 @@
         margin-top: 8px;
     }
 
-    /* Modal de confirmación */
     .modal-content {
         padding: 20px;
         max-width: 90%;
@@ -281,7 +276,7 @@
     }
 }
 
-/* --- Móviles muy pequeños (≤ 480px) --- */
+
 @media (max-width: 480px) {
     .sidebar-nav a {
         font-size: 10px;
@@ -344,7 +339,6 @@
     }
 }
 
-/* Móviles (≤ 768px) */
 @media (max-width: 768px) {
     .admin-footer {
         padding: 20px 16px;
@@ -353,7 +347,6 @@
 
     .footer-grid {
         grid-template-columns: 1fr;
-        /* Una sola columna */
         gap: 20px;
         text-align: center;
     }
@@ -408,7 +401,6 @@
     }
 }
 
-/* Móviles muy pequeños (≤ 480px) */
 @media (max-width: 480px) {
     .admin-footer {
         padding: 16px 12px;
@@ -440,12 +432,10 @@
    MENÚ HAMBURGUESA PARA SIDEBAR (MÓVIL)
    ============================================ */
 
-/* --- Ocultar el botón en desktop/tablet --- */
 .menu-toggle {
     display: none;
 }
 
-/* --- Mostrar el botón solo en móvil (≤ 768px) --- */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
