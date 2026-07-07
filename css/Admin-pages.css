@@ -197,85 +197,7 @@
     min-height: 80px;
 }
 
-.icon-preview {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-top: 8px;
-}
 
-.icon-preview-box {
-    width: 40px;
-    height: 40px;
-    background: var(--contenedor-superficie-alto);
-    border: 1px solid var(--borde-contorno-variante);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primario-fijo-tenue);
-    font-size: 24px;
-}
-
-.icon-hint {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--borde-contorno-variante);
-    margin-top: 4px;
-}
-
-.icon-hint a {
-    color: var(--primario-fijo-tenue);
-    text-decoration: none;
-}
-
-.icon-hint a:hover {
-    text-decoration: underline;
-}
-
-
-
-.btn-cancel {
-    width: 100%;
-    background: transparent;
-    border: 1px solid var(--borde-contorno-variante);
-    color: var(--borde-contorno);
-    padding: 12px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 4px;
-    margin-top: 8px;
-    display: none;
-}
-
-.btn-cancel:hover {
-    border-color: var(--color-error);
-    color: var(--color-error);
-}
-
-.btn-cancel.visible {
-    display: block;
-}
-
-/* Animations */
-@keyframes pulse {
-    0% {
-        opacity: 0.4;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.4;
-    }
-}
 
 .container-vistas {
     margin: 10vh;
@@ -284,119 +206,163 @@
     text-align: center;
     gap: 2rem;
 }
-
 /* ============================================
-                TABLA
-============================================ */
-.tabla-contenedor {
-    background: var(--contenedor-superficie);
-    border: 1px solid var(--borde-contorno-variante);
-    border-radius: 10px;
-    box-shadow: 4px 4px 100px var(--borde-contorno-variante);
-    overflow: hidden;
-    overflow-x: auto;
-    margin: 5vh;
+        RESPONSIVE ADMIN DASHBOARD
+   ============================================ */
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .hero-section {
+        padding: 4rem 32px 2rem;
+        margin: 2vh;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+
+    .container-vistas {
+        margin: 5vh 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+
+    .form-card {
+        padding: 24px;
+    }
+
+
+    .admin-footer {
+        position: relative;
+        padding: 32px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-.tabla {
-    width: 100%;
-    min-width: 800px;
-    border-collapse: collapse;
-    background: var(--contenedor-superficie-alto);
-    border-bottom: 1px solid var(--borde-contorno-variante);
-    transition: .3s ease;
+
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+
+
+    .main-content {
+        width: 100%;
+    }
+
+
+    .hero-section {
+        padding: 3rem 20px 1rem;
+        margin: 0;
+    }
+
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+
+    .hero-subtitle {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+
+    .container-vistas {
+        margin: 3rem 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+
+    .container-vistas .material-symbols-outlined {
+        font-size: 40px;
+    }
+
+
+    .form-card {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+
+    .form-card h3 {
+        font-size: 18px;
+    }
+
+
+    .form-card p {
+        font-size: 14px;
+    }
+
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+
+    .footer-status {
+        justify-content: center;
+    }
+
+
+    .admin-footer {
+        padding: 30px 20px;
+    }
+
 }
 
 
 
-.tabla tr th {
-    background-color: var(--contenedor-superficie-mas-alto);
-    padding: 18px;
-    text-align: left;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: var(--primario-fijo-tenue);
-}
 
-.tabla tr td {
-    padding: 18px;
-    font-size: 14px;
-    color: var(--sobre-superficie);
-    border-bottom: 1px solid var(--borde-contorno-variante);
-}
+/* Celulares pequeños */
+@media (max-width: 480px) {
 
 
-.tabla tr:hover {
-    background: var(--contenedor-superficie-alto);
-}
+    .hero-title {
+        font-size: 30px;
+    }
 
-.tabla tr:last-child td {
-    border-bottom: none;
-}
 
-/* ============================================
-                ESTADOS
-============================================ */
+    .hero-subtitle {
+        font-size: 14px;
+    }
 
-.estado {
-    display: inline-block;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-}
 
-.estado-pagado {
-    background: rgba(0, 220, 229, .15);
-    color: var(--primario-fijo-tenue);
-    border: 1px solid rgba(0, 220, 229, .3);
-}
+    .container-vistas {
+        margin: 2rem 15px;
+    }
 
-.estado-pendiente {
-    background: rgba(157, 0, 255, .15);
-    color: var(--purpura-neon);
-    border: 1px solid rgba(157, 0, 255, .3);
-}
 
-.estado-cancelado {
-    background: rgba(147, 0, 10, .2);
-    color: var(--color-error);
-    border: 1px solid var(--contenedor-error);
-}
+    .form-card {
+        padding: 20px 15px;
+    }
 
-/* ============================================
-                BOTONES
-============================================ */
 
-.acciones {
-    display: flex;
-    gap: 8px;
-}
+    .container-vistas .material-symbols-outlined {
+        font-size: 36px;
+    }
 
-.acciones button {
-    width: 36px;
-    height: 36px;
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--sobre-superficie-variante);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: .3s;
-}
 
-.acciones button:hover {
-    color: var(--primario-fijo-tenue);
-    border-color: var(--primario-fijo-tenue);
-    background: rgba(0, 220, 229, .08);
-}
+    .footer-logo {
+        font-size: 22px;
+    }
 
-.acciones .btn-eliminar:hover {
-    color: var(--color-error);
-    border-color: var(--color-error);
-    background: rgba(147, 0, 10, .15);
 }
