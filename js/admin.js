@@ -13,7 +13,23 @@ const btncerrarFactura = document.getElementById("cerrar-fact");
 const formulario = document.getElementById("modal-formulario");
 const contenido = document.querySelector("#modal-info .modal-contenido");
 const informacion = document.querySelector("#modal-info .card-body");
-const btnCompra = document.getElementById("btnfinal")
+const btnCompra = document.getElementById("btnfinal");
+const formbuzon = document.getElementById("modal-sugerencias");
+const btnBuzon = document.getElementById("sugerencias")
+
+
+function OverlayBuzon (){
+    formbuzon.classList.remove('none');
+    formbuzon.classList.add("activo");
+};
+
+function cerrarBuzon (){
+    formbuzon.classList.remove('activo');
+    formbuzon.classList.add("none");
+};
+
+btnBuzon.addEventListener("click", OverlayBuzon)
+.addEventListener("click", cerrarBuzon)
 
 
 function OverlayModalSesion (){
