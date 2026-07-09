@@ -138,6 +138,8 @@ const usuario =[
     }
 ]
 
+
+
 // Inicializar datos si no existen
 function inicializarDatos() {
     if (!localStorage.getItem('categorias')) {
@@ -152,8 +154,8 @@ function inicializarDatos() {
     if (!localStorage.getItem('user')) {
         localStorage.setItem('user', JSON.stringify(usuario));
     }
-    if (!localStorage.getItem('carrito')) {
-        localStorage.setItem('carrito', JSON.stringify([]));
+    if (!localStorage.getItem('sugerencias')) {
+        localStorage.setItem('sugerencias', JSON.stringify(sugerenciasUsers));
     }
 }
 

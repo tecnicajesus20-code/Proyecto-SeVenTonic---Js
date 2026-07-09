@@ -15,7 +15,8 @@ const contenido = document.querySelector("#modal-info .modal-contenido");
 const informacion = document.querySelector("#modal-info .card-body");
 const btnCompra = document.getElementById("btnfinal");
 const formbuzon = document.getElementById("modal-sugerencias");
-const btnBuzon = document.getElementById("sugerencias")
+const btnBuzon = document.getElementById("sugerencias");
+const btnCerrarBuzon = document.getElementById("cerrar");
 
 
 function OverlayBuzon (){
@@ -29,8 +30,7 @@ function cerrarBuzon (){
 };
 
 btnBuzon.addEventListener("click", OverlayBuzon)
-.addEventListener("click", cerrarBuzon)
-
+btnCerrarBuzon.addEventListener("click", cerrarBuzon);
 
 function OverlayModalSesion (){
     ModalInicioSesion.classList.remove('none');
@@ -155,7 +155,7 @@ function registrarVenta() {
             email: document.getElementById("email").value
         },
 
-        ciudad: eventoSeleccionado.ciudad,
+        ciudad: eventoSeleccionado.ciudad,sugerenciasUsers,
 
         items:[
             {

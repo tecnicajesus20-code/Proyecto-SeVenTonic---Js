@@ -106,4 +106,22 @@ function obtenerCiudades() {
     return [...new Set(ciudades)].sort();
 }
 
+async function cargarSugerencias() {
+    try {
+        const response = await fetch("../Data/Sugerencias.json");
+
+        if (!response.ok) {
+            throw new Error("No se pudo cargar el archivo.");
+        }
+
+        const sugerenciasUsers = await response.json();
+
+        console.table(sugerenciasUsers);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+cargarSugerencias();
+
 console.log(" storage.js listo");// 👈 placeholder online
