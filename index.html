@@ -70,7 +70,7 @@
     <section id="modal-info" class="overlay none">
         <article class="modal-contenido neon-glow-cyan">
             <div>
-                <span class="modal-cerrar" id="cerrar-modal">&times;</span>
+                <span class="modal-cerrar" id="btncerrar">&times;</span>
                 <img id="modal-imagen" class="card-image-wrapper evento-imagen" src="" alt="Imagen del evento">
             </div>
                 <div class="card-body">
@@ -162,23 +162,23 @@
             <form id="form-sugerencias">
                 <div class="form-group">
                     <label for="name">Nombre completo *</label>
-                    <input id="name" type="text" required>
+                    <input id="name" name="nombre" type="text" required>
                 </div>
 
                 <div class="form-group">
                     <label for="correo">Correo electrónico</label>
-                    <input id="correo" type="email">
+                    <input id="correo" name="correo" type="email">
                 </div>
 
                 <div class="form-group">
                     <label for="mensaje">Tu mensaje *</label>
-                    <textarea id="mensaje" type="text" required></textarea>
+                    <textarea id="mensaje" name="mensaje" type="text" required></textarea>
                 </div>
 
                 <button
                     class="btn-submit"
                     type="submit"
-                    id="">
+                    id="enviar">
                     Enviar sugerencias
                 </button>
 
@@ -191,7 +191,8 @@
     <script src="js/storage.js"></script>
     <script src="js/components.js"></script>
     <script src="js/data-seed.js"></script>
-    <script src="js/admin.js"></script>
+     <script src="js/admin.js" ></script>
+    <script src="js/modulos-admin/Sugerencias.js"></script>
     
 </body>
 </html>

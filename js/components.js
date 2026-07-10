@@ -39,6 +39,10 @@ const paginasAdmin = {
         breadcrumb: "Ventas",
         boton: null
     },
+    "Sugerencias.html":{
+        titulo:"Sugerencias",
+        breadcrumb: "sugerencias"
+    }
 };
 
 function obtenerPaginaActual() {
@@ -81,7 +85,8 @@ class Sidebar extends HTMLElement {
             { href: "Principaladmin.html", icono: "dashboard", texto: "PRINCIPAL" },
             { href: "gestion-eventos.html", icono: "event", texto: "GESTIÓN DE EVENTOS" },
             { href: "Categorias.html", icono: "category", texto: "CATEGORÍAS" },
-            { href: "Reporte-ventas.html", icono: "payments", texto: "REGISTRO DE VENTAS" }
+            { href: "Reporte-ventas.html", icono: "payments", texto: "REGISTRO DE VENTAS" },
+            {href: "Sugerencias.html", icono: "box", texto: "SUGERENCIAS"}
         ];
 
         const enlaces = items.map((item) => {

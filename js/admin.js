@@ -5,7 +5,7 @@ const DatosSesion = document.getElementById("form-evento")
 const validoUser = document.getElementById("login")
 const moreinf = document.getElementById("modal-info")
 const btnmoreInf = document.querySelectorAll(".arrow-icon")
-const btnCrrInf = document.getElementById("cerrar-modal")
+const btnCrrInf = document.getElementById("btncerrar")
 const cntdTickets = document.getElementById("input");
 const Facturacion = document.getElementById("modal-compra")
 const btnfacturacion = document.getElementById("btn-comprar")
@@ -14,23 +14,6 @@ const formulario = document.getElementById("modal-formulario");
 const contenido = document.querySelector("#modal-info .modal-contenido");
 const informacion = document.querySelector("#modal-info .card-body");
 const btnCompra = document.getElementById("btnfinal");
-const formbuzon = document.getElementById("modal-sugerencias");
-const btnBuzon = document.getElementById("sugerencias");
-const btnCerrarBuzon = document.getElementById("cerrar");
-
-
-function OverlayBuzon (){
-    formbuzon.classList.remove('none');
-    formbuzon.classList.add("activo");
-};
-
-function cerrarBuzon (){
-    formbuzon.classList.remove('activo');
-    formbuzon.classList.add("none");
-};
-
-btnBuzon.addEventListener("click", OverlayBuzon)
-btnCerrarBuzon.addEventListener("click", cerrarBuzon);
 
 function OverlayModalSesion (){
     ModalInicioSesion.classList.remove('none');
@@ -53,8 +36,10 @@ function validarDatos(evento) {
         }
     else {
         alert("Credenciales incorrectas... SI NO ES ADMINISTRADOR EVITE INTENTARLO");
+        cerrarModalSesion();
     }
 };
+
 
 let precioUnitario = 0;
 
@@ -155,7 +140,7 @@ function registrarVenta() {
             email: document.getElementById("email").value
         },
 
-        ciudad: eventoSeleccionado.ciudad,sugerenciasUsers,
+        ciudad: eventoSeleccionado.ciudad,
 
         items:[
             {
@@ -179,24 +164,20 @@ function registrarVenta() {
     alert("Compra realizada correctamente");
 }
 
-
-
-btningreso.addEventListener("click", OverlayModalSesion)
-btnCerrar.addEventListener("click", cerrarModalSesion) 
-DatosSesion.addEventListener("submit", validarDatos)
-
-
-
 btnmoreInf.forEach(boton => {
     boton.addEventListener("click", OverlayModalinf);
 });
-btnCrrInf.addEventListener("click", cerrarModalinf)
+console.log(btnCrrInf)
+btnCrrInf.addEventListener("click", cerrarModalinf);
 
-cntdTickets.addEventListener("input" , Precio)
+cntdTickets.addEventListener("input" , Precio);
 
+btningreso.addEventListener("click", OverlayModalSesion);
+btnCerrar.addEventListener("click", cerrarModalSesion) ;
+DatosSesion.addEventListener("submit", validarDatos);
 
 
 btnfacturacion.addEventListener("click", mostrarFormularioCompra);
 
-btnCompra.addEventListener("click" , registrarVenta)
+btnCompra.addEventListener("click" , registrarVenta);
 

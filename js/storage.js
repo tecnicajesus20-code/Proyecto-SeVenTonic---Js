@@ -38,14 +38,6 @@ function obtenerinfoenEvento(idEvento) {
     
     return null;
 }
-function guardarCarrito(lista) {
-    guardarDatos('carrito', lista);
-}
-
-function obtenerCarrito() {
-    return ObtenerDatos('carrito');
-}
-
 function guardarVentas(lista) {
     guardarDatos('ventas', lista);
 }
@@ -54,18 +46,6 @@ function obtenerVentas() {
     return ObtenerDatos('ventas');
 }
 
-// 4. Sesión
-function iniciarSesion() {
-    localStorage.setItem('sesionAdmin', 'activa');
-}
-
-function cerrarSesion() {
-    localStorage.removeItem('sesionAdmin');
-}
-
-function estaLogueado() {
-    return localStorage.getItem('sesionAdmin') === 'activa';
-}
 function obtenerUsers() {
     return ObtenerDatos('user');
 }
@@ -115,13 +95,18 @@ async function cargarSugerencias() {
         }
 
         const sugerenciasUsers = await response.json();
-
-        console.table(sugerenciasUsers);
+        return sugerenciasUsers;
     } catch (error) {
         console.error(error);
     }
 }
 
-cargarSugerencias();
+function GuardarSugerencias (lista){
+    guardarDatos("sugerencias", lista)
+}
+
+function ObtenerSugerencias(){
+    return ObtenerDatos("sugerencias")
+}
 
 console.log(" storage.js listo");// 👈 placeholder online

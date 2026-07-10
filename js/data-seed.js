@@ -140,8 +140,11 @@ const usuario =[
 
 
 
+
+
 // Inicializar datos si no existen
-function inicializarDatos() {
+async function inicializarDatos() {
+    const Sugerencias = await cargarSugerencias()
     if (!localStorage.getItem('categorias')) {
         localStorage.setItem('categorias', JSON.stringify(categoriasIniciales));
     }
@@ -155,10 +158,9 @@ function inicializarDatos() {
         localStorage.setItem('user', JSON.stringify(usuario));
     }
     if (!localStorage.getItem('sugerencias')) {
-        localStorage.setItem('sugerencias', JSON.stringify(sugerenciasUsers));
+        localStorage.setItem('sugerencias', JSON.stringify(Sugerencias));
     }
 }
-
-inicializarDatos();
+inicializarDatos(); 
 
 console.log("📦 data-seed.js cargado con imágenes placeholder");
