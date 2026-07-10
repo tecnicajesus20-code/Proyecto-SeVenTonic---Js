@@ -237,6 +237,33 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Evento eliminado correctamente.');
     };
 
+
+    ////////////////////////////////////////
+    function cargarSelectCiudades() {
+
+        const ciudades = ObtenerCiudades();
+        const select = document.getElementById("ciudad");
+    
+        select.innerHTML = `
+            <option value="">Seleccione una ciudad</option>
+        `;
+    
+        ciudades.forEach(ciudad => {
+    
+            const option = document.createElement("option");
+    
+            option.value = ciudad.nombre;
+            option.textContent = ciudad.nombre;
+    
+            select.appendChild(option);
+    
+        });
+    
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+        cargarSelectCiudades();
+    });
+
     // ============================================================
     // 11. EVENT LISTENERS
     // ============================================================

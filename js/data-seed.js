@@ -144,7 +144,7 @@ const usuario =[
 
 // Inicializar datos si no existen
 async function inicializarDatos() {
-    const Sugerencias = await cargarSugerencias()
+    const ciudades = await cargarCiudades()
     if (!localStorage.getItem('categorias')) {
         localStorage.setItem('categorias', JSON.stringify(categoriasIniciales));
     }
@@ -157,8 +157,8 @@ async function inicializarDatos() {
     if (!localStorage.getItem('user')) {
         localStorage.setItem('user', JSON.stringify(usuario));
     }
-    if (!localStorage.getItem('sugerencias')) {
-        localStorage.setItem('sugerencias', JSON.stringify(Sugerencias));
+    if (!localStorage.getItem('ciudades')) {
+        localStorage.setItem('ciudades', JSON.stringify(ciudades));
     }
 }
 inicializarDatos(); 

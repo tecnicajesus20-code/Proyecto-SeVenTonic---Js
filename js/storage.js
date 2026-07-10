@@ -80,33 +80,28 @@ function filtrarPorPrecio(min, max) {
     });
 }
 
-function obtenerCiudades() {
-    const eventos = obtenerEventos();
-    const ciudades = eventos.map(e => e.ciudad);
-    return [...new Set(ciudades)].sort();
-}
 
-async function cargarSugerencias() {
+async function cargarCiudades() {
     try {
-        const response = await fetch("../Data/Sugerencias.json");
+        const response = await fetch("../Data/Ciudades.json");
 
         if (!response.ok) {
             throw new Error("No se pudo cargar el archivo.");
         }
 
-        const sugerenciasUsers = await response.json();
-        return sugerenciasUsers;
+        const Ciudades = await response.json();
+        return Ciudades;
     } catch (error) {
         console.error(error);
     }
 }
 
-function GuardarSugerencias (lista){
-    guardarDatos("sugerencias", lista)
+function GuardarCiudades (lista){
+    guardarDatos("ciudades", lista)
 }
 
-function ObtenerSugerencias(){
-    return ObtenerDatos("sugerencias")
+function ObtenerCiudades(){
+    return ObtenerDatos("ciudades")
 }
 
 console.log(" storage.js listo");// 👈 placeholder online

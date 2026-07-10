@@ -39,9 +39,9 @@ const paginasAdmin = {
         breadcrumb: "Ventas",
         boton: null
     },
-    "Sugerencias.html":{
-        titulo:"Sugerencias",
-        breadcrumb: "sugerencias"
+    "gestionCiudades.html":{
+        titulo:"GESTIÓN DE CIUDADES",
+        breadcrumb: "ciudades"
     }
 };
 
@@ -86,7 +86,7 @@ class Sidebar extends HTMLElement {
             { href: "gestion-eventos.html", icono: "event", texto: "GESTIÓN DE EVENTOS" },
             { href: "Categorias.html", icono: "category", texto: "CATEGORÍAS" },
             { href: "Reporte-ventas.html", icono: "payments", texto: "REGISTRO DE VENTAS" },
-            {href: "Sugerencias.html", icono: "box", texto: "SUGERENCIAS"}
+            {href: "gestionCiudades.html", icono: "Apartment", texto: "GESTION DE CIUDADES"}
         ];
 
         const enlaces = items.map((item) => {

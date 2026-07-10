@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ciudades</title>
+    <link rel="stylesheet" href="../css/Admin-categorias.css">
+    <link rel="stylesheet" href="../css/Admin-pages.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/Admin-RegistroVentas.css">
+    <link rel="stylesheet" href="../css/Admin-GestionEventos.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/Sugerencias.css">
+</head>
+
+<body id="admin-ciudades">
+    <barra-lateral-admin></barra-lateral-admin>
+    <main class="contenido-principal">
+        <header>
+            <header-admin></header-admin>
+        </header>
+        <section>
+            <div class="page-content-ventas">
+                <section>
+                    <div class="metric-card card">
+                        <div class="metric-icon">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                        </div>
+                        <div>
+
+                        <div>
+                            <button id="btn-crear-ciudad" class="btn-submit">
+                                Crear evento
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="table-container">
+                    <div class="table-header">
+                        <h3 class="table-title">Lista de Ciudades</h3>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="sales-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha de integracion</th>
+                                    <th>Nombre de la ciudad</th>
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-citys">
+                                <tr>
+                                    <td colspan="6" class="text-center"
+                                        style="padding: 40px; color: var(--sobre-superficie-variante);">
+                                        Cargando...
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+        <footer>
+            <footer-admin></footer-admin>
+        </footer>
+        <section id="modal-ciudades" class="overlay none ">
+            <article  class="modal-formulario modal-contenido neon-glow-cyan ">
+                <h2>SELECCIONA LA CIUDAD QUE QUIERES AGREGAR</h2>
+                <span class="modal-cerrar" id="cerrar">&times;</span>
+                 
+                
+                <form id="form-ciudades">
+                    <div class="form-group">
+                        <label for="id">IDENTIFICADOR UNICO DE LA CIUDAD</label>
+                        <input id="id" name="id" type="text" required>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label for="name">Nombre de la ciudad</label>
+                        <input id="name" name="nombre" type="text" required>
+                    </div>    
+
+                      
+                    <button
+                        class="btn-submit"
+                        type="submit"
+                        id="enviar">
+                        <span class="material-symbols-outlined">add</span>
+                        Crear ciudad
+                    </button>
+    
+                </form>
+    
+            </article>
+    
+        </section>
+
+        <!-- /////////////////////////////////////////////////
+        EDITAR CIUDAD
+        //////////////////////////////////////////////// -->
+        <section id="modal-editar" class="overlay none ">
+            <article  class="modal-formulario modal-contenido neon-glow-cyan ">
+                <h2>EDITAR CIUDAD</h2>
+                <span class="modal-cerrar" id="editarcerrar">&times;</span>
+                 
+                
+                <form id="form-editar">
+                    <div class="form-group">
+                        <label for="idEDITABLE">IDENTIFICADOR UNICO DE LA CIUDAD</label>
+                        <input id="idEDITABLE" name="id" type="text" value="" required>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label for="EditarCiudad">Nombre de la ciudad</label>
+                        <input id="EditarCiudad" name="nombre" type="text" value="" required>
+                    </div>    
+                    <button
+                        class="btn-submit"
+                        type="submit"
+                        id="editar">
+                        <span class="material-symbols-outlined">Edit
+                        </span>
+                        REALIZAR CAMBIOS
+                    </button>
+    
+                </form>
+    
+            </article>
+    
+        </section>
+
+    </main>
+    <script src="../js/storage.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/data-seed.js"></script>
+</body>
+
+</html>
