@@ -213,10 +213,6 @@ class HeaderUsuario extends HTMLElement {
                                 </span>
                             </div>
                         <div style="display: flex; gap: 4vh;">
-                                <btn-secundario id="sugerencias" class ="btn">
-                                <span class="material-symbols-outlined"> box 
-                                </span> Sugerencias
-                                </btn-secundario>
                                 <btn-secundario id="Sign" class ="btn">Ingresar como Admistrador</btn-secundario>
                         </div>
                     </div>
