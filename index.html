@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevenTonic</title>
+   <link rel="stylesheet" href="css/Admin-categorias.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/WebComponents.css">
+    <link rel="stylesheet" href="css/Admin-RegistroVentas.css">
+    <link rel="stylesheet" href="css/Admin-GestionEventos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/home-Usuario.css">
+    <link rel="stylesheet" href="css/Admin-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;700&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header>
+            <header-user></header-user>
+        </header>form-group
+         
+
+    <main class="main-layout">
+       <section class="container">
+         <articule class="hero-section">
+                <h1 class="hero-title">
+                    SUMÉRGETE EN EL <span class="gradient-text">RITMO</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Descubre los mejores Event, diseñados para ti. La energía del directo en la palma de tu mano.
+                </p>
+        </articule>
+        
+       </section>
+
+        <cards-eventos class="events-container" ></cards-eventos>
+    
+    
+    <!-- /////////////////////////////////
+        MODAL INICIO SECCION
+    ////////////////////////////-->
+    <div id="modal-inicioseccion" class="overlay none"  >
+        <div class="modal-contenido">
+            <span class="modal-cerrar" id="user-cerrar">&times;</span>
+            <h2 id="modal-titulo">Iniciar Seccion</h2>
+            <form id="form-evento">
+                <label for="Email">Usuario</label>
+                <input type="email" id="Email" placeholder="correo@gmail.com" required>
+
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="Contraseña" required>
+                <a href="Administracion/Principaladmin.html">
+                <button stype="submit" class="btn-primary" id="btn-guardar-evento">
+                    Iniciar Seccion
+                </button>
+                </a>
+            </form>
+        </div>
+    </div>
+
+   
+
+     <!-- /////////////////////////////////
+        MODAL MAS INFORMACION
+    ////////////////////////////-->
+
+    <section id="modal-info" class="overlay none">
+        <article class="modal-contenido neon-glow-cyan">
+            <div>
+                <span class="modal-cerrar" id="btncerrar">&times;</span>
+                <img id="modal-imagen" class="card-image-wrapper evento-imagen" src="" alt="Imagen del evento">
+            </div>
+                <div class="card-body">
+                    <h2 id="modal-nombre" class="card-title"></h2>
+    
+                    <p class="card-info">
+                        <strong>Ciudad:</strong>
+                        <span id="modal-ciudad"></span>
+                    </p>
+    
+                    <p class="card-info">
+                        <strong>Fecha:</strong>
+                        <span id="modal-fecha"></span>
+    
+                        <span> || Hora: </span>
+    
+                        <span id="modal-hora"></span>
+                    </p>
+    
+                    <p class="card-info">
+                        <strong>Descripción:</strong>
+                    </p>
+                    <p id="modal-descripcion" class="card-info"></p>
+                    
+                    <div class="card-footer">
+                        <span id="modal-precio" class="card-tag"></span>
+                        <input id="input" type="number" class="quantity-input" min="1" value="1">
+                        <button class="btn-primary" id="btn-comprar">
+                            Comprar Tickets
+                        </button>
+                    </div>
+    
+                </div>
+        </article>
+         <!-- FORMULARIO --> >
+        <article id="modal-formulario" class="modal-formulario modal-contenido neon-glow-cyan none">
+
+            <hr>
+
+            <h2>Datos del comprador</h2>
+
+            <form id="form-compra">
+
+                <div class="form-group">
+                    <label for="identificacion">Identificación *</label>
+                    <input id="identificacion" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input id="nombre" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input id="direccion" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input id="telefono" type="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input id="email" type="email" required>
+                </div>
+
+                <button
+                    class="btn-submit"
+                    type="submit"
+                    id="btnfinal">
+                    FINALIZAR COMPRA
+
+                </button>
+
+            </form>
+
+        </article>
+    </section>
+</main>
+   
+    <script src="js/storage.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/data-seed.js"></script>
+     <script src="js/admin.js" ></script>
+    <script src="js/modulos-admin/Sugerencias.js"></script>
+    
+</body>
+</html>
+
+
