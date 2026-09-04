@@ -1,0 +1,361 @@
+#btn-nueva-categoria .material-symbols-outlined,
+#btn-nuevo-evento .material-symbols-outlined {
+    font-size: 16px;
+}
+.hero-section {
+    position: relative;
+    padding: 5rem 64px 3rem 64px;
+    max-width: 1280px;
+    margin: 3vh;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #dce4e4;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: #b9caca;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+.sidebar-nav .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.sidebar-avatar .material-symbols-outlined {
+    font-size: 22px;
+    color: var(--primario-fijo-tenue);
+}
+
+.container-vistas .material-symbols-outlined {
+    font-size: 48px;
+    color: var(--primario-fijo-tenue);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.header btn-primario {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-grid-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--sobre-superficie-variante);
+    padding: 32px 0;
+}
+
+/* ============================================
+   FOOTER ADMIN - ESTILOS BASE
+   ============================================ */
+.admin-footer {
+    background: var(--contenedor-superficie-mas-bajo);
+    padding: 48px 64px;
+    border-top: 1px solid rgba(58, 73, 74, 0.2);
+    display: grid;
+     width: 100%;
+     grid-template-rows: auto 1fr auto;
+     position: fixed;
+     bottom: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 28px;
+    color: var( --cian-neon);
+    font-weight: 700;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: var(--borde-contorno);
+    margin-top: 8px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sobre-superficie);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: var(--sobre-superficie-variante);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+    display: block;
+    padding: 4px 0;
+}
+
+.footer-link:hover {
+    color: var(--primario-fijo-tenue);
+}
+
+.footer-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+}
+
+.footer-status-text {
+    font-size: 13px;
+    color: var(--sobre-superficie-variante);
+}
+
+/* ============================================
+           SIDEBAR FORM
+           ============================================ */
+.form-sidebar {
+    position: sticky;
+    top: 128px;
+}
+
+.form-card {
+    background: rgba(25, 33, 33, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(132, 148, 149, 0.2);
+    padding: 32px;
+    border-radius: 8px; 
+}
+
+.form-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--borde-contorno);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: var(--contenedor-superficie);
+    border: none;
+    border-bottom: 1px solid var(--borde-contorno-variante);
+    padding: 8px 0;
+    color: var(--sobre-superficie);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primario-fijo-tenue);
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+
+
+.container-vistas {
+    margin: 10vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-align: center;
+    gap: 2rem;
+}
+/* ============================================
+        RESPONSIVE ADMIN DASHBOARD
+   ============================================ */
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .hero-section {
+        padding: 4rem 32px 2rem;
+        margin: 2vh;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+
+    .container-vistas {
+        margin: 5vh 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+
+    .form-card {
+        padding: 24px;
+    }
+
+
+    .admin-footer {
+        position: relative;
+        padding: 32px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+
+    .main-content {
+        width: 100%;
+    }
+
+
+    .hero-section {
+        padding: 3rem 20px 1rem;
+        margin: 0;
+    }
+
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+
+    .hero-subtitle {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+
+    .container-vistas {
+        margin: 3rem 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+
+    .container-vistas .material-symbols-outlined {
+        font-size: 40px;
+    }
+
+
+    .form-card {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+
+    .form-card h3 {
+        font-size: 18px;
+    }
+
+
+    .form-card p {
+        font-size: 14px;
+    }
+
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+
+    .footer-status {
+        justify-content: center;
+    }
+
+
+    .admin-footer {
+        padding: 30px 20px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+
+    .container-vistas {
+        margin: 2rem 15px;
+    }
+
+
+    .form-card {
+        padding: 20px 15px;
+    }
+
+
+    .container-vistas .material-symbols-outlined {
+        font-size: 36px;
+    }
+
+
+    .footer-logo {
+        font-size: 22px;
+    }
+
+}
