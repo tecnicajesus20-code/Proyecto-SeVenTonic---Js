@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Categorías</title>
+    <link rel="stylesheet" href="../css/Admin-categorias.css">
+    <link rel="stylesheet" href="../css/Admin-pages.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+
+<body id="admin-categorias">
+    <!-- ============================================
+SIDEBAR
+============================================ -->
+    <barra-lateral-admin></barra-lateral-admin>
+
+    <!-- ============================================
+MAIN CONTENT
+============================================ -->
+    <main class="main-content">
+        <header>
+            <header-admin></header-admin>
+        </header>
+        <div class="page-content">
+            <div>
+                <div class="category-grid-header">
+                    <h3 class="category-grid-title">Categorías Existentes</h3>
+                    <div class="search-box">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                        <input type="text" id="buscador-categorias" placeholder="Buscar categoría...">
+                    </div>
+                </div>
+
+                <div id="contenedor-categorias" class="category-grid">
+                    <p class="category-grid-loading">
+                        Cargando categorías...
+                    </p>
+                </div>
+            </div>
+            <aside class="form-sidebar">
+                <div class="form-card">
+                    <h3 id="form-titulo">Creación Rápida</h3>
+                    <form id="form-categoria">
+                        <input type="hidden" id="categoria-id-editar" value="">
+
+                        <div class="form-group">
+                            <label for="input-nombre">Nombre de la Categoría</label>
+                            <input id="input-nombre" type="text" placeholder="Ej: Gaming" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-icono">Icono (Material Symbol)</label>
+                            <div class="icon-preview">
+                                <input id="input-icono" type="text" placeholder="music_note" value="category">
+                                <div class="icon-preview-box">
+                                    <span id="vista-previa-icono" class="material-symbols-outlined">category</span>
+                                </div>
+                            </div>
+                            <div class="icon-hint">
+                                Busca el nombre del icono en <a href="https://fonts.google.com/icons"
+                                    target="_blank">Material Symbols</a>.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-descripcion">Descripción</label>
+                            <textarea id="input-descripcion"
+                                placeholder="Breve descripción de la categoría..."></textarea>
+                        </div>
+
+                        <button class="btn-submit" type="submit" id="btn-guardar">GUARDAR CATEGORÍA</button>
+                        <button class="btn-cancel" type="button" id="btn-cancelar-edicion">
+                            CANCELAR EDICIÓN
+                        </button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <footer-admin></footer-admin>
+        </footer>
+    </main>
+
+    <!-- ============================================
+MODAL DE CONFIRMACIÓN
+============================================ -->
+    <div class="modal-overlay" id="modal-confirmacion">
+        <div class="modal-content">
+            <h3>¿Eliminar categoría?</h3>
+            <p id="modal-mensaje">¿Estás seguro de que quieres eliminar esta categoría? Esta acción no se puede
+                deshacer.</p>
+            <div class="modal-actions">
+                <button class="btn-modal-cancel" id="btn-modal-cancelar">Cancelar</button>
+                <button class="btn-modal-confirm" id="btn-modal-confirmar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/modulos-admin/categorias.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/data-seed.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

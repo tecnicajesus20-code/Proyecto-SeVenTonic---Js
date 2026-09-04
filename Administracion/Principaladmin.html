@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Administrador</title>
+    <link rel="stylesheet" href="../css/Admin-categorias.css">
+    <link rel="stylesheet" href="../css/Admin-pages.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/WebComponents.css">
+    <link rel="stylesheet" href="../css/Admin-RegistroVentas.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body id="admin-principal">
+      <barra-lateral-admin></barra-lateral-admin>
+    <main class="main-content">
+        <header>
+            <header-admin ></header-admin>
+        </header>  
+        <section>
+            <article style="text-align: center" >
+                <articule class="hero-section">
+                <h1 class="hero-title">
+                    GESTIONA TUS <span class="gradient-text">EVENTOS</span>
+                </h1>
+                <p class="hero-subtitle">
+                     Administra eventos, controla ventas y lleva la experiencia de tus asistentes al siguiente nivel.
+                </p>
+                </articule>
+            </article>
+            <article class="container-vistas">
+                <div class="form-card ">
+                    <span>
+                        <span class="material-symbols-outlined">
+                        category
+                        </span>
+                        <h3>Categorias</h3>
+                        <p>Organiza y segmenta tus experiencias por genero y estilo.</p>
+                    </span>
+                    <a href="Categorias.html">
+                        <btn-primario> Gestionar </btn-primario>
+                    </a>
+                </div>
+
+                 <div class="form-card ">
+                    <span>
+                        <span class="material-symbols-outlined">
+                            event
+                        </span>
+                        <h3>Eventos</h3>
+                        <p>Control sobre fechas, lugares y disponibilidad en tiempo real</p>
+                    </span>
+                    <a href="gestion-eventos.html">
+                    <btn-primario>Panel de eventos</btn-primario>
+                    </a>
+                </div>
+
+                <div class="form-card ">
+                    <span>
+                        <span class="material-symbols-outlined">
+                            Payments
+                        </span>
+                        <h3>Ventas</h3>
+                        <p>Analiza ingresos, tendencias y comportamientos de compra</p>
+                    </span>
+                    <a href="Reporte-ventas.html">
+                    <btn-primario>Ver Reportes</btn-primario>
+                    </a>
+                </div>
+                
+            </article>
+        </section>
+        <footer>
+            <footer-admin></footer-admin>
+        </footer>
+    </main>
+     <script src="../js/modulos-admin/reporte-ventas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/data-seed.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
